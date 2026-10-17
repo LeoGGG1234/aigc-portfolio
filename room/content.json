@@ -65,10 +65,10 @@
     },
     {
       "label": {
-        "zh": "作品与流程说明",
-        "en": "Portfolio & project notes"
+        "zh": "原版作品集",
+        "en": "Original portfolio"
       },
-      "url": "https://leoggg1234.github.io/aigc-portfolio/"
+      "url": "https://leoggg1234.github.io/aigc-portfolio/portfolio.html"
     },
     {
       "label": {
@@ -139,7 +139,7 @@
         "zh": "同一镜头中原片与电视画面替换后的关键帧对照。我提出修改目标，与 Agent 协作适配脚本并复查替换范围、文字及电视外壳。该处理针对近固定镜头；对照用于检查局部变化。",
         "en": "Matched frames before and after replacing the TV picture in the same shot. I set the revision goals and worked with agents on script adaptation and checks of the replacement area, text and TV casing. This is a near-static-shot treatment, shown to inspect local changes."
       },
-      "link": "https://leoggg1234.github.io/aigc-portfolio/#film"
+      "link": "https://leoggg1234.github.io/aigc-portfolio/portfolio.html#film"
     },
     {
       "title": {

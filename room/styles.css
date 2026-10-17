@@ -128,11 +128,11 @@ body.view-work .dials {
   text-decoration: underline transparent; text-underline-offset: 6px; transition: text-decoration-color .2s;
 }
 .topnav button:hover, .topnav button[aria-current="true"] { text-decoration-color: currentColor; }
-.topnav .text-link {
+.topnav .text-link, .topnav .portfolio-link {
   display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; color: inherit; font-size: 11.5px;
   letter-spacing: .14em; text-transform: uppercase; text-decoration: underline transparent; text-underline-offset: 6px; transition: text-decoration-color .2s;
 }
-.topnav .text-link:hover { text-decoration-color: currentColor; }
+.topnav .text-link:hover, .topnav .portfolio-link:hover { text-decoration-color: currentColor; }
 .topnav .nav-gap { width: 1px; margin: 12px 6px; background: var(--on-scene-line); }
 .topnav .icon-btn { display: grid; place-items: center; width: 40px; padding: 0; text-decoration: none; font-size: 13px; letter-spacing: 0; }
 .topnav .icon-btn:hover { background: rgba(247, 240, 230, .1); border-radius: 10px; }
@@ -324,3 +324,6 @@ body.view-work .dials {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
+
+/* Original portfolio entry follows the current room language. */
+:root[lang="zh-CN"] .classic-en, :root:not([lang="zh-CN"]) .classic-zh { display: none; }
