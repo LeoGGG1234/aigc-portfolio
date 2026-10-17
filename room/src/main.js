@@ -233,7 +233,7 @@ async function boot() {
   const rig = new CameraRig(camera, canvas, manifest.views);
   const picker = new Picker(camera, canvas, hits);
   const lamp = { level: 0 };
-  const desk = { override: null, level: 0 };
+  const desk = { mode: 'auto', override: null, level: 0 };
   // room lighting: auto follows the time of day (warm); warm / cool / off are fixed choices
   const LIGHT = {
     warm: { lamps: new THREE.Color(1.0, 0.62, 0.32), desk: new THREE.Color(1.0, 0.8, 0.56), glow: new THREE.Color(1, 0.68, 0.36) },
@@ -258,7 +258,8 @@ async function boot() {
   const fx = { lampColor: null, fairyChase: 0 };
 
   const refresh = () => {
-    ui.setState({ season: climate.season, time: climate.time, weather: climate.weather, live: climate.live, lights: lights.mode, sound: soundOn, view: rig.view });
+    const roomMode = desk.override !== null || desk.mode !== lights.mode ? 'custom' : lights.mode;
+    ui.setState({ season: climate.season, time: climate.time, weather: climate.weather, live: climate.live, lights: roomMode, sound: soundOn, view: rig.view });
     emit('state', { season: climate.season, time: climate.time, weather: climate.weather, lights: lights.mode, sound: soundOn, live: climate.live });
   };
   climate.onThunder = (delay) => sound.thunder(delay);
@@ -315,8 +316,9 @@ async function boot() {
   const dismissHints = () => { if (!seen) { seen = true; store.set('studio.seen', '1'); } hintsUntil = 0; ui.hints(null); };
   Object.assign(H, {
     season: (v) => { climate.live = false; climate.setSeason(v); refresh(); },
-    time: (t) => { climate.live = false; climate.setTime(t); desk.override = null; refresh(); },
-    lights: (m) => { lights.mode = m; desk.override = null; sound.switchClick(); refresh(); },
+    time: (t) => { climate.live = false; climate.setTime(t); refresh(); },
+    // The atmosphere menu is a room-wide preset; object clicks keep their own state.
+    lights: (m) => { lights.mode = m; desk.mode = m; desk.override = null; sound.switchClick(); refresh(); },
     cycleLights: () => H.lights(nextOf(['auto', 'warm', 'cool', 'off'], lights.mode)),
     weather: (w) => { if (w === 'live') goLive(true); else { climate.live = false; climate.setWeather(w); refresh(); } },
     cycleSeason: () => H.season(nextOf(SEASONS, climate.season)),
@@ -327,7 +329,6 @@ async function boot() {
       const r = randomAtmosphere(climate);
       climate.live = false;
       climate.setSeason(r.season); climate.setWeather(r.weather); climate.setTime(r.time);
-      desk.override = null;
       sound.switchClick();
       ui.toast(i18n.t('toast.random', { mood: climate.label(i18n) }));
       refresh();
@@ -354,15 +355,20 @@ async function boot() {
     },
   });
 
-  const toggle = (obj, current) => { obj.override = current > 0.5 ? 0 : 1; sound.switchClick(); };
+  const toggle = (obj, current) => { obj.override = current > 0.5 ? 0 : 1; sound.switchClick(); refresh(); };
+  const cycleLamps = () => {
+    lights.mode = { auto: 'cool', warm: 'cool', cool: 'off', off: 'warm' }[lights.mode];
+    sound.switchClick();
+    refresh();
+  };
   const actions = {
     projector: () => { if (rig.view === 'work') H.next(); else H.go('work'); },
     screen: () => H.go('work'),
     monitors: () => H.go('about'),
     desklamp: () => toggle(desk, desk.level),
-    // clicking a lamp walks through warm → cool → off
-    floorlamp: () => H.lights({ auto: 'cool', warm: 'cool', cool: 'off', off: 'warm' }[lights.mode]),
-    fairy: () => H.lights({ auto: 'cool', warm: 'cool', cool: 'off', off: 'warm' }[lights.mode]),
+    // The baked ambient-lamp group cycles without resetting the independent desk lamp.
+    floorlamp: cycleLamps,
+    fairy: cycleLamps,
     window: () => {
       const sky = ctx.eggs.sky;
       if (sky?.meteorVisible?.()) ui.toast(sky.wish(), 4200);
@@ -559,9 +565,11 @@ async function boot() {
     const wantLamps = { auto: autoLamps, warm: 1, cool: 1, off: 0 }[lights.mode];
     lamp.level += ((wantLamps * lampsOn) - lamp.level) * Math.min(1, dt * (entered ? 2.2 : 8));
     const L = LIGHT[lights.mode === 'cool' ? 'cool' : 'warm'];
+    const deskL = LIGHT[desk.mode === 'cool' ? 'cool' : 'warm'];
     const kc = Math.min(1, dt * 3);
-    lights.lamps.lerp(fx.lampColor || L.lamps, kc); lights.desk.lerp(L.desk, kc); lights.glow.lerp(fx.lampColor || L.glow, kc);
-    desk.level += (((desk.override ?? autoDesk) * lampsOn) - desk.level) * Math.min(1, dt * (entered ? 2.2 : 8));
+    lights.lamps.lerp(fx.lampColor || L.lamps, kc); lights.desk.lerp(deskL.desk, kc); lights.glow.lerp(fx.lampColor || L.glow, kc);
+    const wantDesk = desk.override ?? { auto: autoDesk, warm: 1, cool: 1, off: 0 }[desk.mode];
+    desk.level += ((wantDesk * lampsOn) - desk.level) * Math.min(1, dt * (entered ? 2.2 : 8));
 
     mixer.update({ times, seasons, wx, lamps: lamp.level, desk: desk.level, lampTint: lights.lamps, deskTint: lights.desk,
       slideTint: projector.lightLevel, flash: climate.flash, screening, time: clock });

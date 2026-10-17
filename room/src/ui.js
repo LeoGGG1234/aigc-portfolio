@@ -33,7 +33,7 @@ const ICON = {
   time: { dawn: 'i-dawn', day: 'i-sun', dusk: 'i-dusk', night: 'i-moon' },
   season: { spring: 'i-sprout', summer: 'i-tree', autumn: 'i-leaf', winter: 'i-flake' },
   weather: { clear: 'i-clear', cloudy: 'i-cloud', rain: 'i-rain', storm: 'i-storm', snow: 'i-snow', fog: 'i-fog', live: 'i-live' },
-  lights: { auto: 'i-auto', warm: 'i-bulb', cool: 'i-bulb', off: 'i-off' },
+  lights: { auto: 'i-auto', warm: 'i-bulb', cool: 'i-bulb', off: 'i-off', custom: 'i-bulb' },
 };
 
 // surface palettes, interpolated by time of day (0 day … 1 night)
