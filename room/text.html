@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>葛津亦 Leo · 文字版</title>
+  <meta name="description" content="葛津亦（Leo）的个人工作室：AIGC 图像与视频、ComfyUI 与 LoRA 工作流、AI 短剧、程序化影像及 AI 辅助创作。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 28V12L16 3l12 9v16z' fill='%23d9a441'/%3E%3Crect x='12' y='15' width='8' height='8' fill='%2314110e'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --paper: #f5efe6; --ink: #241f1b; --soft: #6b6058; --line: rgba(36, 31, 27, .14); --accent: #9a5a18;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #15120f; --ink: #efe6da; --soft: #a79b8f; --line: rgba(239, 230, 218, .14); --accent: #e0a65a; }
+    }
+    * { box-sizing: border-box; }
+    html { font-synthesis: weight; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+    main { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+    a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+    a:hover { text-decoration-color: currentColor; }
+    .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+    .top a, .top button { color: var(--soft); }
+    .top button { font: inherit; letter-spacing: inherit; background: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; text-transform: none; }
+    .top button:hover { color: var(--ink); border-color: var(--soft); }
+    header { margin: 64px 0 56px; }
+    h1 { margin: 0; font-weight: 200; font-size: clamp(40px, 8vw, 64px); line-height: 1.05; letter-spacing: -.02em; }
+    .role { margin: 14px 0 0; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
+    .tagline { margin: 22px 0 0; font-size: 19px; font-weight: 300; }
+    section { border-top: 1px solid var(--line); padding: 28px 0 8px; }
+    h2 { margin: 0 0 18px; font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
+    .item { display: grid; grid-template-columns: 200px 1fr; gap: 20px; margin: 0 0 32px; }
+    .item.noimg { grid-template-columns: 1fr; }
+    .item img, .item video { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 6px; background: var(--line); display: block; }
+    h3 { margin: 0; font-size: 19px; font-weight: 500; line-height: 1.35; }
+    .meta { margin: 4px 0 8px; font: 12px/1.5 var(--mono); color: var(--soft); }
+    p { margin: 0 0 12px; }
+    ul.links { list-style: none; margin: 0; padding: 0; }
+    ul.links li { border-bottom: 1px solid var(--line); }
+    ul.links a { display: flex; justify-content: space-between; padding: 12px 0; text-decoration: none; }
+    ul.links a:hover span:first-child { text-decoration: underline; text-underline-offset: 4px; }
+    .books, .records { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+    .books li { display: grid; grid-template-columns: 6px 1fr; gap: 14px; }
+    .books .chip { border-radius: 2px; }
+    .entry { margin: 0 0 28px; }
+    .entry .body p { color: var(--ink); }
+    .soft { color: var(--soft); }
+    footer { margin-top: 48px; font-size: 13px; color: var(--soft); }
+    @media (max-width: 560px) {
+      main { padding-top: 28px; }
+      header { margin: 40px 0 40px; }
+      .item { grid-template-columns: 1fr; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="top">
+      <a id="to-room" href="./">← <span data-t="room">Enter the 3D studio</span></a>
+      <button id="lang" type="button">中文</button>
+    </div>
+    <header>
+      <h1 id="name">&nbsp;</h1>
+      <p class="role" id="role"></p>
+      <p class="tagline" id="tagline"></p>
+    </header>
+    <div id="sections"></div>
+    <footer id="foot"></footer>
+    <noscript><p>This page reads its text from content.json and needs JavaScript.</p></noscript>
+  </main>
+  <script type="module">
+    const T = {
+      en: { room: 'Enter the 3D studio', about: 'About', work: 'Work', contact: 'Contact', books: 'On my shelf', records: 'On the record player',
+        diary: 'Diary', lang: '中文', view: 'View', foot: 'This is the plain version of the site. The same words live in the 3D studio.', title: 'Text version' },
+      zh: { room: '进入 3D 工作室', about: '关于', work: '作品', contact: '联系', books: '书架上', records: '唱机上',
+        diary: '日记', lang: 'English', view: '查看', foot: '这是网站的文字版，内容与 3D 工作室相同。', title: '文字版' },
+    };
+    const params = new URLSearchParams(location.search);
+    let saved = null;
+    try { saved = localStorage.getItem('lang'); } catch { /* private mode */ }
+    if (saved) { try { saved = JSON.parse(saved); } catch { /* plain string */ } }
+    let lang = params.get('lang') || saved || ((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en');
+    if (!T[lang]) lang = 'en';
+    const pick = (v) => (v == null ? '' : typeof v === 'string' ? v : (v[lang] || v.en || Object.values(v)[0] || ''));
+    const el = (tag, props = {}, ...kids) => { const e = document.createElement(tag); Object.assign(e, props); e.append(...kids.filter((k) => k != null && k !== '')); return e; };
+    const safe = (u) => {
+      if (!u || typeof u !== 'string') return '';
+      try { const x = new URL(u, location.href); return ['http:', 'https:', 'mailto:', 'tel:'].includes(x.protocol) ? x.href : ''; } catch { return ''; }
+    };
+    const local = (u) => { const s = safe(u); return s && new URL(s).origin === location.origin ? s : ''; };
+    const paras = (text) => pick(text).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p) => el('p', { textContent: p }));
+
+    const [content, diary] = await Promise.all([
+      fetch('content.json', { cache: 'no-cache' }).then((r) => r.json()),
+      fetch('diary.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : { entries: [] })).catch(() => ({ entries: [] })),
+    ]);
+
+    function render() {
+      const t = T[lang], c = content, s = c.site || {};
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      document.title = `${pick(s.name)} · ${t.title}`;
+      document.querySelectorAll('[data-t]').forEach((n) => { n.textContent = t[n.dataset.t]; });
+      document.getElementById('to-room').href = `./?lang=${lang}`;
+      document.getElementById('lang').textContent = t.lang;
+      document.getElementById('name').textContent = pick(s.name);
+      document.getElementById('role').textContent = pick(s.role);
+      document.getElementById('tagline').textContent = pick(s.tagline);
+      const out = [];
+      const section = (title, ...kids) => out.push(el('section', {}, el('h2', { textContent: title }), ...kids));
+
+      if (pick(c.about)) section(t.about, ...paras(c.about));
+
+      const works = (c.works || []).filter((w) => w && typeof w === 'object');
+      if (works.length) section(t.work, ...works.map((w) => {
+        const src = local(w.type === 'video' ? (w.poster || '') : w.src);
+        const media = src ? el('img', { src, alt: pick(w.title), loading: 'lazy' }) : null;
+        const meta = [w.year, (w.tools || []).join(', ')].filter(Boolean).join(' · ');
+        const link = safe(w.link);
+        return el('article', { className: 'item' + (media ? '' : ' noimg') }, media,
+          el('div', {}, el('h3', { textContent: pick(w.title) }), meta ? el('p', { className: 'meta', textContent: meta }) : null,
+            ...paras(w.description), link ? el('p', {}, el('a', { href: link, target: '_blank', rel: 'noopener', textContent: `${t.view} ↗` })) : null));
+      }));
+
+      const links = (c.links || []).map((l) => ({ l, href: safe(l?.url) })).filter((x) => x.href);
+      if (links.length) section(t.contact, el('ul', { className: 'links' }, ...links.map(({ l, href }) => {
+        const download = typeof l.download === 'string' && new URL(href).origin === location.origin;
+        const attrs = download ? { download: l.download } : { target: href.startsWith('mailto:') ? '' : '_blank', rel: 'noopener' };
+        return el('li', {}, el('a', { href, ...attrs }, el('span', { textContent: pick(l.label) }), el('span', { textContent: download ? '↓' : '↗', className: 'soft' })));
+      })));
+
+      const books = (c.books || []).filter((b) => b && typeof b === 'object');
+      if (books.length) section(t.books, el('ul', { className: 'books' }, ...books.map((b) => {
+        const link = safe(b.link);
+        const head = [pick(b.title), pick(b.author), b.year].filter(Boolean).join(' · ');
+        return el('li', {}, el('span', { className: 'chip', style: `background:${/^#[0-9a-f]{3,8}$/i.test(b.color || '') ? b.color : 'var(--line)'}` }),
+          el('div', {}, link ? el('a', { href: link, target: '_blank', rel: 'noopener', textContent: head }) : el('strong', { textContent: head, style: 'font-weight:500' }),
+            pick(b.note) ? el('p', { className: 'soft', textContent: pick(b.note) }) : null));
+      })));
+
+      const tracks = (c.music?.tracks || []).filter((r) => r && typeof r === 'object' && r.src);
+      if (tracks.length) section(t.records, el('ul', { className: 'records' }, ...tracks.map((r) => {
+        const src = local(r.src);
+        return el('li', {}, el('strong', { textContent: [pick(r.title), pick(r.artist)].filter(Boolean).join(' · '), style: 'font-weight:500' }),
+          pick(r.notes) ? el('p', { className: 'soft', textContent: pick(r.notes) }) : null,
+          src ? el('audio', { src, controls: true, preload: 'none', style: 'width:100%' }) : null);
+      })));
+
+      const entries = (diary.entries || []).filter((e) => e && typeof e === 'object' && (pick(e.title) || pick(e.body)))
+        .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+      if (entries.length) section(t.diary, ...entries.map((e) => el('article', { className: 'entry' },
+        el('h3', { textContent: pick(e.title) }), el('p', { className: 'meta', textContent: e.date || '' }),
+        el('div', { className: 'body' }, ...paras(e.body)))));
+
+      document.getElementById('sections').replaceChildren(...out);
+      document.getElementById('foot').textContent = t.foot;
+    }
+    document.getElementById('lang').addEventListener('click', () => {
+      lang = lang === 'en' ? 'zh' : 'en';
+      try { localStorage.setItem('lang', lang); } catch { /* private mode */ }
+      render();
+    });
+    render();
+  </script>
+</body>
+</html>
