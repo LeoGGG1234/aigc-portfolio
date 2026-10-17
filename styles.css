@@ -16,3 +16,9 @@
 .short-card>p.quiet{margin-top:8px}
 .shorts-note{border-top:1px solid var(--line);padding-top:18px;margin:24px 0 0}
 @media(max-width:700px){.shorts-grid{grid-template-columns:1fr;gap:30px}.short-player video{height:auto;aspect-ratio:9/16;max-height:620px}.short-heading h3{font-size:22px}}
+
+/* Completed MMD project, with the full vertical frame preserved. */
+.mmd-case{display:grid;grid-template-columns:minmax(260px,380px) minmax(0,1fr);gap:44px;align-items:start}
+.mmd-meta{margin-bottom:10px}.mmd-case .short-player video{height:480px;object-fit:contain}
+.mmd-notes h3{font-size:18px;font-weight:600;margin:0 0 10px}.mmd-notes p{font-size:14px;color:#55574f;margin:0 0 24px}.mmd-notes .mmd-credits{margin:24px 0 0}
+@media(max-width:700px){.mmd-case{grid-template-columns:1fr;gap:24px}.mmd-case .short-player video{height:auto;aspect-ratio:9/16;max-height:620px}}
