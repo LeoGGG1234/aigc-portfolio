@@ -22,3 +22,8 @@
 .mmd-meta{margin-bottom:10px}.mmd-case .short-player video{height:480px;object-fit:contain}
 .mmd-notes h3{font-size:18px;font-weight:600;margin:0 0 10px}.mmd-notes p{font-size:14px;color:#55574f;margin:0 0 24px}.mmd-notes .mmd-credits{margin:24px 0 0}
 @media(max-width:700px){.mmd-case{grid-template-columns:1fr;gap:24px}.mmd-case .short-player video{height:auto;aspect-ratio:9/16;max-height:620px}}
+
+/* Resume links use the same versioned Word and PDF on both public pages. */
+.resume-section{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+.resume-section h2{font-size:20px;font-weight:550;margin:0 0 5px}.resume-section p{font-size:13px;color:var(--muted);margin:0}.resume-section .actions{margin:0;flex-shrink:0}
+@media(max-width:700px){.resume-section{display:block}.resume-section .actions{margin-top:17px}}

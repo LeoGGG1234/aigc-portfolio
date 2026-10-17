@@ -10,6 +10,8 @@
 
 《The Bass》采用 PMX / VMD 与 Blender 制作，角色与模型来自米哈游 / HoYoverse，动作与镜头来自 Snaksil，音乐为 DJ Wave - 巴巴贝斯 The Bass，着色预设来自小二。本人负责视觉要求、审片和版本取舍，工程及后期包含 Agent 协作。
 
+简历下载：网站首页与项目说明页均提供 Word / PDF，使用已收录《The Bass》的 `2026-10-17_v004` 版本，文件位于 `assets/resume/`。更新时同时替换两个文件及两个页面的版本化链接。
+
 ## 更新
 
 在本仓库 `main` 分支修改公开文件并推送，GitHub Pages 发布根目录。保留仓库名与入口路径可沿用简历链接。原有 Sites 入口作为历史版本保留。
