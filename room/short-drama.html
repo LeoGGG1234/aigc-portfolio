@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Leo 的 AI 短剧创作练习：剧本、分镜、角色表演、生成素材审片与剪辑。">
-  <title>AI 短剧创作 · Leo</title>
+  <meta name="description" content="P. ÆVRYX 的 AI 短剧创作练习：剧本、分镜、角色表演、生成素材审片与剪辑。">
+  <title>AI 短剧创作 · P. ÆVRYX</title>
   <style>
     :root { --paper:#f5efe6; --ink:#241f1b; --soft:#74665a; --line:#241f1b24; --accent:#965c27; --screen:#e7ded2; }
     * { box-sizing:border-box; }
@@ -127,7 +127,7 @@
     function render(){
       const copy=lang==='en'?en:zh;
       document.documentElement.lang=lang==='zh'?'zh-CN':'en';
-      document.title=`${copy.title} · Leo`;
+      document.title=`${copy.title} · P. ÆVRYX`;
       document.querySelectorAll('[data-copy]').forEach(n=>{n.textContent=copy[n.dataset.copy];});
       document.getElementById('language').textContent=lang==='zh'?'English':'中文';
       document.getElementById('back').href=`./?lang=${lang}`;

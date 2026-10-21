@@ -1,8 +1,8 @@
 {
   "site": {
     "name": {
-      "zh": "Leo",
-      "en": "Leo"
+      "zh": "P. ÆVRYX",
+      "en": "P. ÆVRYX"
     },
     "role": {
       "zh": "AIGC 视觉与工作流",
@@ -29,8 +29,8 @@
     "music": ""
   },
   "about": {
-    "zh": "我是 Leo，昆士兰大学信息系统硕士，有数据分析工作经历，目前聚焦 AIGC 图像与视频创作、ComfyUI 工作流搭建与调试、LoRA 训练评估，以及 AI 短剧的剧本、分镜与剪辑。我的实践包括《雨停之前》43 秒叙事开场、足球题材 AI 戏仿短剧、角色与风格 LoRA、崩铁 MMD 成片、3D 驱动 AI 动作实验及 AI 应用项目。我负责需求拆解、视觉参考、审片与迭代取舍，并与 Agent 协作调试脚本、复核输出和整理版本记录。目前关注上海的 AIGC 与创意技术岗位。",
-    "en": "I’m Leo, an Information Systems master’s graduate from the University of Queensland with a background in data analysis. I focus on AI image and video creation, building and debugging ComfyUI workflows, LoRA training and review, and scripts, shot design and editing for AI shorts. My practice includes the 43-second opening of Before the Rain Stops, football-themed AI parody shorts, character and style LoRA studies, a completed HSR MMD film, 3D-driven AI motion experiments, and AI applications. I define requirements and visual references, review outputs and choose revisions, and work with agents on scripts, output checks and version records. I’m interested in AIGC and creative technology roles in Shanghai."
+    "zh": "我是 Petra Aevryx（P. ÆVRYX），昆士兰大学信息系统硕士，有数据分析工作经历，目前聚焦 AIGC 图像与视频创作、ComfyUI 工作流搭建与调试、LoRA 训练评估，以及 AI 短剧的剧本、分镜与剪辑。我的实践包括《雨停之前》43 秒叙事开场、足球题材 AI 戏仿短剧、角色与风格 LoRA、崩铁 MMD 成片、3D 驱动 AI 动作实验及 AI 应用项目。我负责需求拆解、视觉参考、审片与迭代取舍，并与 Agent 协作调试脚本、复核输出和整理版本记录。目前关注上海的 AIGC 与创意技术岗位。",
+    "en": "I’m Petra Aevryx (P. ÆVRYX), an Information Systems master’s graduate from the University of Queensland with a background in data analysis. I focus on AI image and video creation, building and debugging ComfyUI workflows, LoRA training and review, and scripts, shot design and editing for AI shorts. My practice includes the 43-second opening of Before the Rain Stops, football-themed AI parody shorts, character and style LoRA studies, a completed HSR MMD film, 3D-driven AI motion experiments, and AI applications. I define requirements and visual references, review outputs and choose revisions, and work with agents on scripts, output checks and version records. I’m interested in AIGC and creative technology roles in Shanghai."
   },
   "links": [
     {
@@ -476,8 +476,8 @@
   ],
   "secrets": {
     "plant": {
-      "zh": "先做小样，再看结果，记录每一次取舍。——Leo",
-      "en": "Start with a small test. Look at the result. Keep a record of the choices. — Leo"
+      "zh": "先做小样，再看结果，记录每一次取舍。——P. ÆVRYX",
+      "en": "Start with a small test. Look at the result. Keep a record of the choices. — P. ÆVRYX"
     }
   }
 }
