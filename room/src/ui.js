@@ -305,6 +305,13 @@ export class UI {
     if (refocus && had) restoreFocus(this.panelOpener);
   }
 
+  // Relocalise an open mobile sheet without replacing its media/player.
+  updateSheetText(work) {
+    $('sheet-title').textContent = i18n.pick(work.title);
+    $('sheet-desc').textContent = i18n.pick(work.description);
+    setLink($('sheet-link'), work.link);
+  }
+
   // phones: the work opens flat and full-screen over the dimmed room
   openSheet(work, index, total, media) {
     $('sheet-index').textContent = `${String(index + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}${work.year ? ' · ' + work.year : ''}`;

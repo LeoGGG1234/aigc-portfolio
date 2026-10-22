@@ -352,7 +352,7 @@ async function boot() {
     if (persist) rememberLanguage(lang); else updateLanguageUrl(lang);
     ui.renderStatic();
     ui.caption(content.works[projector.index], projector.index, content.works.length);
-    if (ui.sheetOpen) openSheet();
+    if (ui.sheetOpen) ui.updateSheetText(content.works[projector.index]);
     refresh();
     emit('lang', lang);
   }
