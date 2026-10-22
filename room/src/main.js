@@ -1,3 +1,4 @@
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange } from '../../language.js?v=20261022';
 import * as THREE from './three.js';
 import { GLTFLoader } from './three.js';
 import { i18n, loadContent, placeholderCanvas } from './content.js';
@@ -73,9 +74,7 @@ async function titleCard(content) {
 
 async function boot() {
   const content = await loadContent();
-  const saved = store.get('lang');
-  const browserZh = (navigator.language || '').toLowerCase().startsWith('zh');
-  i18n.lang = params.get('lang') || saved || (browserZh ? 'zh' : content.site.defaultLanguage || 'en');
+  i18n.lang = readLanguage(content.site.defaultLanguage || 'en');
 
   const H = {};
   const ui = new UI(content, H);
@@ -345,15 +344,19 @@ async function boot() {
     prev: () => { if (!entered) return; dismissHints(); if (rig.view !== 'work') go('work'); projector.prev(); sound.click(); },
     showWork: (i) => { go('work'); projector.show(i); sound.click(); },
     sound: () => { soundOn = !soundOn; sound.start(soundOn); refresh(); },
-    lang: () => {
-      i18n.lang = i18n.lang === 'en' ? 'zh' : 'en';
-      store.set('lang', i18n.lang);
-      ui.renderStatic();
-      ui.caption(content.works[projector.index], projector.index, content.works.length);
-      refresh();
-      emit('lang', i18n.lang);
-    },
+    lang: () => applyLanguage(i18n.lang === 'en' ? 'zh' : 'en', true),
   });
+
+  function applyLanguage(lang, persist = false) {
+    i18n.lang = lang;
+    if (persist) rememberLanguage(lang); else updateLanguageUrl(lang);
+    ui.renderStatic();
+    ui.caption(content.works[projector.index], projector.index, content.works.length);
+    if (ui.sheetOpen) openSheet();
+    refresh();
+    emit('lang', lang);
+  }
+  onLanguageChange(lang => { if (lang !== i18n.lang) applyLanguage(lang); });
 
   const toggle = (obj, current) => { obj.override = current > 0.5 ? 0 : 1; sound.switchClick(); refresh(); };
   const cycleLamps = () => {

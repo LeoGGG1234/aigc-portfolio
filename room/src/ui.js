@@ -9,6 +9,7 @@ const safeHref = (s) => {
   if (!raw) return '';
   try {
     const u = new URL(raw, location.href);
+    if (u.origin === location.origin && /\/(?:portfolio\.html|room\/(?:index\.html|text\.html|mv\.html|short-drama\.html)?)$/.test(u.pathname)) u.searchParams.set('lang', i18n.lang);
     return ['http:', 'https:', 'mailto:', 'tel:'].includes(u.protocol) ? u.href : '';
   } catch { return ''; }
 };
@@ -115,8 +116,9 @@ export class UI {
     document.title = `${name} · ${i18n.pick(s.role)}`;
     i18n.apply();
     // the plain text version: content.json site.textVersionUrl if set, else the generated text.html
-    const textHref = safeHref(s.textVersionUrl) || `text.html?lang=${i18n.lang}`;
-    document.querySelectorAll('.text-link').forEach((a) => { a.href = textHref; });
+    const textHref = new URL(safeHref(s.textVersionUrl) || 'text.html', location.href);
+    if (textHref.origin === location.origin) textHref.searchParams.set('lang', i18n.lang);
+    document.querySelectorAll('.text-link').forEach((a) => { a.href = textHref.href; });
     document.querySelectorAll('.lang-btn').forEach((b) => { b.textContent = i18n.lang === 'en' ? '中' : 'EN'; });
     if (this.state) this.setState(this.state);
   }
