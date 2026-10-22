@@ -9,7 +9,7 @@ const safeHref = (s) => {
   if (!raw) return '';
   try {
     const u = new URL(raw, location.href);
-    if (u.origin === location.origin && /\/(?:portfolio\.html|room\/(?:index\.html|text\.html|mv\.html|short-drama\.html)?)$/.test(u.pathname)) u.searchParams.set('lang', i18n.lang);
+    if (u.origin === location.origin && /\/(?:portfolio\.html|materials\.html|room\/(?:index\.html|text\.html|mv\.html|short-drama\.html)?)$/.test(u.pathname)) u.searchParams.set('lang', i18n.lang);
     return ['http:', 'https:', 'mailto:', 'tel:'].includes(u.protocol) ? u.href : '';
   } catch { return ''; }
 };

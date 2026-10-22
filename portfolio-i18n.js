@@ -185,7 +185,7 @@ const button = document.getElementById('portfolio-lang');
 const languageLinks = [...document.querySelectorAll('a[href]')].filter(a => {
   if (a.hasAttribute('download')) return false;
   const u = new URL(a.href);
-  return u.origin === location.origin && (u.pathname === new URL('./', location.href).pathname || /\/(?:portfolio\.html|room\/(?:index\.html|text\.html|mv\.html|short-drama\.html)?)$/.test(u.pathname));
+  return u.origin === location.origin && (u.pathname === new URL('./', location.href).pathname || /\/(?:portfolio\.html|materials\.html|room\/(?:index\.html|text\.html|mv\.html|short-drama\.html)?)$/.test(u.pathname));
 });
 let lang = readLanguage('en');
 function render(next, persist = false) {

@@ -10,7 +10,7 @@ import { Sound } from './audio.js';
 import { CameraRig, Picker } from './controls.js';
 import { Climate, PRESETS, TIMES, SEASONS, fetchLive, localTime, seasonFor, randomAtmosphere, smoother } from './weather.js';
 import { Post, gradeFor } from './post.js';
-import { UI } from './ui.js?v=20261022-bilingual-v1';
+import { UI } from './ui.js?v=20261022-materials-v1';
 import { loadEggs } from './eggs/host.js';
 
 const params = new URLSearchParams(location.search);
