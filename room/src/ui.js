@@ -119,6 +119,7 @@ export class UI {
     const textHref = new URL(safeHref(s.textVersionUrl) || 'text.html', location.href);
     if (textHref.origin === location.origin) textHref.searchParams.set('lang', i18n.lang);
     document.querySelectorAll('.text-link').forEach((a) => { a.href = textHref.href; });
+    document.querySelectorAll('.portfolio-link').forEach((a) => { a.href = safeHref(a.href); });
     document.querySelectorAll('.lang-btn').forEach((b) => { b.textContent = i18n.lang === 'en' ? '中' : 'EN'; });
     if (this.state) this.setState(this.state);
   }
