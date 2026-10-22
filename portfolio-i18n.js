@@ -7,7 +7,7 @@ const TEXT = {
   "材料入口": "Materials",
   "AIGC 视频创作": "AI Video Production",
   "与视觉工作流": "& Visual Workflows",
-  "我是 Petra Aevryx（P. ÆVRYX），拥有 3 年 AI 工具使用经验，聚焦 AI 视频生成与制作、ComfyUI 工作流及 LoRA 实践。从创意、剧本分镜到审片与剪辑，结合生成结果持续迭代；现有《Twenty-Four Frames》98 秒 MV 完整剪辑版、两条足球搞笑短片及《The Bass》崩铁 MMD 成片。": "I’m Petra Aevryx (P. ÆVRYX). I have three years of experience using AI tools, focusing on AI video generation and production, ComfyUI workflows and LoRA practice. I develop ideas, scripts and storyboards, then review and edit generated footage through successive revisions. My work includes the 98-second complete edit of Twenty-Four Frames, two football comedy shorts and the Honkai: Star Rail MMD film The Bass.",
+  "我是 P. ÆVRYX，拥有 3 年 AI 工具使用经验，聚焦 AI 视频生成与制作、ComfyUI 工作流及 LoRA 实践。从创意、剧本分镜到审片与剪辑，结合生成结果持续迭代；现有《Twenty-Four Frames》98 秒 MV 完整剪辑版、两条足球搞笑短片及《The Bass》崩铁 MMD 成片。": "I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video generation and production, ComfyUI workflows and LoRA practice. I develop ideas, scripts and storyboards, then review and edit generated footage through successive revisions. My work includes the 98-second complete edit of Twenty-Four Frames, two football comedy shorts and the Honkai: Star Rail MMD film The Bass.",
   "观看完整短片 ↘": "Watch the films ↘",
   "查看工作流与材料": "Explore workflows & materials",
   "创作与技术相互连接": "Connecting creative and technical work",
@@ -157,7 +157,7 @@ const ATTR = {
   "电视边缘羽化1.7和2.8像素对照": "TV-screen edge feathering at 1.7 and 2.8 pixels"
 };
 
-import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange } from './language.js?v=20261022';
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261022-language-fix-v1';
 
 // Translate text nodes in place: video elements, playback state and anchors stay intact.
 const textEntries = [];
@@ -182,11 +182,6 @@ const chineseTitle = document.title;
 const meta = document.querySelector('meta[name="description"]');
 const chineseDescription = meta.content;
 const button = document.getElementById('portfolio-lang');
-const languageLinks = [...document.querySelectorAll('a[href]')].filter(a => {
-  if (a.hasAttribute('download')) return false;
-  const u = new URL(a.href);
-  return u.origin === location.origin && (u.pathname === new URL('./', location.href).pathname || /\/(?:portfolio\.html|materials\.html|room\/(?:index\.html|text\.html|mv\.html|short-drama\.html)?)$/.test(u.pathname));
-});
 let lang = readLanguage('en');
 function render(next, persist = false) {
   lang = next;
@@ -199,9 +194,9 @@ function render(next, persist = false) {
   button.lang = lang === 'zh' ? 'en' : 'zh-CN';
   button.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换为中文');
   button.title = lang === 'zh' ? 'English' : '中文';
-  for (const a of languageLinks) { const u = new URL(a.href); u.searchParams.set('lang', lang); a.href = u.href; }
-  if (persist) rememberLanguage(lang);
+  localisePageLinks(lang);
+  if (persist) rememberLanguage(lang); else updateLanguageUrl(lang);
 }
 button.addEventListener('click', () => render(lang === 'zh' ? 'en' : 'zh', true));
-onLanguageChange(next => { render(next); updateLanguageUrl(next); });
+onLanguageChange(next => { if (next !== lang) render(next); });
 render(lang);

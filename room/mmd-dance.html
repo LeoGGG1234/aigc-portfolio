@@ -14,7 +14,7 @@
 </head>
 <body><main>
   <nav><a id="back" href="./?lang=zh">← <span data-copy="back">返回工作室</span></a><button id="language" type="button">English</button></nav>
-  <header><div class="eyebrow">LEO · MMD / BLENDER</div><h1 data-copy="title">The Bass · 崩铁记忆队</h1><p class="meta" data-copy="status">已完成 · 15.33 秒 · 720 × 1280 · 30fps</p></header>
+  <header><div class="eyebrow">P. ÆVRYX · MMD / BLENDER</div><h1 data-copy="title">The Bass · 崩铁记忆队</h1><p class="meta" data-copy="status">已完成 · 15.33 秒 · 720 × 1280 · 30fps</p></header>
   <section class="project" aria-label="The Bass project">
     <div class="screen"><video controls playsinline preload="metadata" poster="media/portfolio/dance/the-bass-v010-poster.jpg" aria-label="The Bass completed HSR MMD video"><source src="media/portfolio/dance/the-bass-v010.mp4" type="video/mp4"><a href="media/portfolio/dance/the-bass-v010.mp4">The Bass MP4</a></video></div>
     <div class="notes">
@@ -28,11 +28,26 @@
   <footer><p data-copy="credits">角色与模型：米哈游 / HoYoverse；动作与镜头：Snaksil；音乐：DJ Wave - 巴巴贝斯 The Bass；着色预设：小二。相关素材来自第三方。</p><p data-copy="statusNote">展示 v010 交付版，保留工程、历史版本及复查记录。</p></footer>
 </main>
 <script type="module">
+  import {readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks, labelLanguageButton} from '../language.js?v=20261022-language-fix-v1';
+
   const copy={
     zh:{back:'返回工作室',title:'The Bass · 崩铁记忆队',status:'已完成 · 15.33 秒 · 720 × 1280 · 30fps',projectTitle:'四角色 MMD 成片',project:'以《崩坏：星穹铁道》的遐蝶、风堇、昔涟和长夜月为角色，使用 PMX / VMD 与 Blender 制作竖屏舞蹈，围绕俯视与正面镜头切换组织角色表演。',contributionTitle:'我的贡献与迭代',contribution:'我负责角色与视觉要求、构图、表情审阅和版本取舍，与 Agent 协作完成工程操作及后期。迭代涵盖光影、手脸接触、风堇眼形与长夜月马尾遮挡等细节。',route:'本片采用 MMD / Blender 渲染。原来的 13 秒 3D 驱动 AI 动作实验使用另一条制作流程，两项实践分别保留。',credits:'角色与模型：米哈游 / HoYoverse；动作与镜头：Snaksil；音乐：DJ Wave - 巴巴贝斯 The Bass；着色预设：小二。相关素材来自第三方。',statusNote:'展示 v010 交付版，保留工程、历史版本及复查记录。'},
-    en:{back:'Back to the studio',title:'The Bass · HSR Memory Team',status:'Completed · 15.33 seconds · 720 × 1280 · 30 fps',projectTitle:'A four-character MMD dance',project:'A vertical dance featuring Castorice, Hyacine, Cyrene and Evernight from Honkai: Star Rail, made with PMX / VMD and Blender. Character performances are arranged through overhead and frontal camera cuts.',contributionTitle:'My contribution and revisions',contribution:'I define character and visual requirements, review framing and expressions, and select revisions, working with agents on scene operations and finishing. Iterations covered lighting, hand-to-face contact, Hyacine’s eye shape and Evernight’s ponytail occlusion.',route:'This film uses MMD / Blender rendering. The earlier 13-second 3D-driven AI motion study follows a separate production workflow; both projects are retained.',credits:'Characters and models: HoYoverse. Motion and camera: Snaksil. Music: DJ Wave - The Bass. Shading preset: Xiaoer. Related assets are third-party.',statusNote:'Version v010 delivery, with scene files, earlier versions and review records preserved.'}
+    en:{back:'Back to the studio',title:'The Bass · HSR Remembrance Team',status:'Completed · 15.33 seconds · 720 × 1280 · 30 fps',projectTitle:'A four-character MMD dance',project:'A vertical dance featuring Castorice, Hyacine, Cyrene and Evernight from Honkai: Star Rail, made with PMX / VMD and Blender. Character performances are arranged through overhead and frontal camera cuts.',contributionTitle:'My contribution and revisions',contribution:'I define character and visual requirements, review framing and expressions, and select revisions, working with agents on scene operations and finishing. Iterations covered lighting, hand-to-face contact, Hyacine’s eye shape and Evernight’s ponytail occlusion.',route:'This film uses MMD / Blender rendering. The earlier 13-second 3D-driven AI motion study follows a separate production workflow; both projects are retained.',credits:'Characters and models: HoYoverse. Motion and camera: Snaksil. Music: DJ Wave - The Bass. Shading preset: Xiao Er (小二). Related assets are third-party.',statusNote:'Version v010 delivery, with scene files, earlier versions and review records preserved.'}
   };
-  let lang=new URLSearchParams(location.search).get('lang')==='en'?'en':'zh';
-  function render(){document.documentElement.lang=lang==='zh'?'zh-CN':'en';for(const node of document.querySelectorAll('[data-copy]'))node.textContent=copy[lang][node.dataset.copy];document.getElementById('back').href=`./?lang=${lang}`;document.getElementById('language').textContent=lang==='zh'?'English':'中文';}
-  document.getElementById('language').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';render();});render();
+  let lang=readLanguage('zh');
+  function render(persist=false){
+    document.documentElement.lang=lang==='zh'?'zh-CN':'en';
+    for(const node of document.querySelectorAll('[data-copy]')) node.textContent=copy[lang][node.dataset.copy];
+    document.title=`${copy[lang].title} MMD · P. ÆVRYX`;
+    document.querySelector('meta[name="description"]').content=lang==='zh'?'P. ÆVRYX 的《The Bass》崩铁记忆队 MMD 成片、制作说明与素材署名。':'The Bass HSR Remembrance Team MMD film by P. ÆVRYX, with production notes and asset credits.';
+    document.querySelector('.project').setAttribute('aria-label',lang==='zh'?'The Bass 项目':'The Bass project');
+    document.querySelector('video').setAttribute('aria-label',lang==='zh'?'The Bass，崩铁记忆队完整 MMD 成片':'The Bass, complete HSR Remembrance Team MMD film');
+    document.getElementById('language').textContent=lang==='zh'?'English':'中文';
+    labelLanguageButton(document.getElementById('language'),lang);
+    localisePageLinks(lang);
+    if(persist) rememberLanguage(lang); else updateLanguageUrl(lang);
+  }
+  document.getElementById('language').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';render(true);});
+  onLanguageChange(next=>{if(next!==lang){lang=next;render();}});
+  render();
 </script></body></html>

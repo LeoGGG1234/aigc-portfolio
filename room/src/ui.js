@@ -1,5 +1,6 @@
 // DOM overlay: masthead, nav, atmosphere popover, caption, in-scene labels, panels, mobile sheet, entry.
 import { i18n } from './content.js';
+import { languageHref, labelLanguageButton } from '../../language.js?v=20261022-language-fix-v1';
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -9,8 +10,7 @@ const safeHref = (s) => {
   if (!raw) return '';
   try {
     const u = new URL(raw, location.href);
-    if (u.origin === location.origin && /\/(?:portfolio\.html|materials\.html|room\/(?:index\.html|text\.html|mv\.html|short-drama\.html)?)$/.test(u.pathname)) u.searchParams.set('lang', i18n.lang);
-    return ['http:', 'https:', 'mailto:', 'tel:'].includes(u.protocol) ? u.href : '';
+    return ['http:', 'https:', 'mailto:', 'tel:'].includes(u.protocol) ? languageHref(u.href, i18n.lang) : '';
   } catch { return ''; }
 };
 const panelLinks = (links) => {
@@ -53,6 +53,10 @@ export class UI {
     this.idleTimer = 0;
     this.themeMix = -1;
     this.view = 'home';
+    // Capture source labels once; never translate an already-translated label.
+    this.labelEntries = [...document.querySelectorAll('[aria-label], [title]')].flatMap(element =>
+      ['aria-label', 'title'].filter(name => element.hasAttribute(name)).map(name => ({element, name, en: element.getAttribute(name)})));
+
     // a keyboard pick (Enter / Space: detail 0) returns focus to the dial button, since the menu hides
     const pickAnd = (fn) => (e) => { e.stopPropagation(); fn(); this.closeDials(e.detail === 0); };
     document.querySelectorAll('[data-season]').forEach((b) => b.addEventListener('click', pickAnd(() => handlers.season(b.dataset.season))));
@@ -115,13 +119,20 @@ export class UI {
     if (ln) ln.textContent = name;
     document.title = `${name} · ${i18n.pick(s.role)}`;
     i18n.apply();
+    document.querySelector('meta[name="description"]').content = i18n.lang === 'zh'
+      ? 'P. ÆVRYX 的个人工作室：AIGC 图像与视频、ComfyUI 与 LoRA 工作流、AI 短剧、程序化影像及 AI 辅助创作。'
+      : 'The studio of P. ÆVRYX: AI images and video, ComfyUI and LoRA workflows, short films, procedural visuals and AI-assisted production.';
+    const labels = {'Interactive 3D studio':'可交互的 3D 工作室','Sections':'页面导航','Sound':'声音','Sound (M)':'声音（M）','Language':'语言','Atmosphere':'氛围设置','Previous work':'上一个作品','Next work':'下一个作品','Close':'关闭','Work':'作品'};
+    for (const entry of this.labelEntries) entry.element.setAttribute(entry.name, i18n.lang === 'zh' ? (labels[entry.en] || entry.en) : entry.en);
+
     // the plain text version: content.json site.textVersionUrl if set, else the generated text.html
     const textHref = new URL(safeHref(s.textVersionUrl) || 'text.html', location.href);
     if (textHref.origin === location.origin) textHref.searchParams.set('lang', i18n.lang);
     document.querySelectorAll('.text-link').forEach((a) => { a.href = textHref.href; });
     document.querySelectorAll('.portfolio-link').forEach((a) => { a.href = safeHref(a.href); });
-    document.querySelectorAll('.lang-btn').forEach((b) => { b.textContent = i18n.lang === 'en' ? '中' : 'EN'; });
+    document.querySelectorAll('.lang-btn').forEach((b) => { b.textContent = i18n.lang === 'en' ? '中' : 'EN'; labelLanguageButton(b, i18n.lang); });
     if (this.state) this.setState(this.state);
+    if ($('panel').dataset.open === 'true' && this.panelKind) this.openPanel(this.panelKind, this.panelThumbs, true);
   }
 
   // chrome fades away after 3 s without input on the home view; any input brings it back
@@ -270,7 +281,12 @@ export class UI {
     this.toastTimer = setTimeout(() => { t.hidden = true; }, ms);
   }
 
-  openPanel(kind, thumbs = []) {
+  openPanel(kind, thumbs = [], refresh = false) {
+    this.panelKind = kind;
+    this.panelThumbs = thumbs;
+    const body = $('panel-body');
+    const focusedIndex = [...body.querySelectorAll('a, button')].indexOf(document.activeElement);
+    const scrollTop = body.scrollTop, panelScrollTop = $('panel').scrollTop;
     const c = this.c;
     const name = i18n.pick(c.site.name);
     let html = '';
@@ -289,14 +305,19 @@ export class UI {
         + (textHref ? `<ul style="margin-top:14px"><li><a href="${esc(textHref)}" target="_blank" rel="noopener"><span>${esc(i18n.t('nav.list'))} · HTML</span><span>↗</span></a></li></ul>` : '');
     }
     const active = document.activeElement;   // remembered so Esc / Close can hand focus back
-    if (!$('panel').contains(active)) this.panelOpener = active && active !== document.body ? active : null;
+    if (!refresh && !$('panel').contains(active)) this.panelOpener = active && active !== document.body ? active : null;
     $('panel-body').innerHTML = html;
     $('panel').dataset.open = 'true';
-    this.toggleAtmo(false);
+    if (!refresh) this.toggleAtmo(false);
     $('panel-body').querySelectorAll('[data-work]').forEach((b) => b.addEventListener('click', () => {
       this.closePanel();
       this.h.showWork(Number(b.dataset.work));
     }));
+    if (refresh) {
+      if (focusedIndex >= 0) body.querySelectorAll('a, button')[focusedIndex]?.focus({preventScroll:true});
+      body.scrollTop = scrollTop;
+      $('panel').scrollTop = panelScrollTop;
+    }
   }
 
   closePanel(refocus = false) {

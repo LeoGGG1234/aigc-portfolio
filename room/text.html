@@ -71,23 +71,19 @@
     <noscript><p>This page reads its text from content.json and needs JavaScript.</p></noscript>
   </main>
   <script type="module">
+    import {readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, languageHref, localisePageLinks, labelLanguageButton} from '../language.js?v=20261022-language-fix-v1';
     const T = {
       en: { room: 'Enter the 3D studio', about: 'About', work: 'Work', contact: 'Contact', books: 'On my shelf', records: 'On the record player',
         diary: 'Diary', lang: '中文', view: 'View', foot: 'This is the plain version of the site. The same words live in the 3D studio.', title: 'Text version' },
       zh: { room: '进入 3D 工作室', about: '关于', work: '作品', contact: '联系', books: '书架上', records: '唱机上',
         diary: '日记', lang: 'English', view: '查看', foot: '这是网站的文字版，内容与 3D 工作室相同。', title: '文字版' },
     };
-    const params = new URLSearchParams(location.search);
-    let saved = null;
-    try { saved = localStorage.getItem('lang'); } catch { /* private mode */ }
-    if (saved) { try { saved = JSON.parse(saved); } catch { /* plain string */ } }
-    let lang = params.get('lang') || saved || ((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en');
-    if (!T[lang]) lang = 'en';
+    let lang = readLanguage('en');
     const pick = (v) => (v == null ? '' : typeof v === 'string' ? v : (v[lang] || v.en || Object.values(v)[0] || ''));
     const el = (tag, props = {}, ...kids) => { const e = document.createElement(tag); Object.assign(e, props); e.append(...kids.filter((k) => k != null && k !== '')); return e; };
     const safe = (u) => {
       if (!u || typeof u !== 'string') return '';
-      try { const x = new URL(u, location.href); return ['http:', 'https:', 'mailto:', 'tel:'].includes(x.protocol) ? x.href : ''; } catch { return ''; }
+      try { const x = new URL(u, location.href); return ['http:', 'https:', 'mailto:', 'tel:'].includes(x.protocol) ? languageHref(x.href, lang) : ''; } catch { return ''; }
     };
     const local = (u) => { const s = safe(u); return s && new URL(s).origin === location.origin ? s : ''; };
     const paras = (text) => pick(text).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p) => el('p', { textContent: p }));
@@ -97,10 +93,11 @@
       fetch('diary.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : { entries: [] })).catch(() => ({ entries: [] })),
     ]);
 
-    function render() {
+    function render(persist = false) {
       const t = T[lang], c = content, s = c.site || {};
       document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
       document.title = `${pick(s.name)} · ${t.title}`;
+      document.querySelector('meta[name="description"]').content = lang === 'zh' ? 'P. ÆVRYX 的个人工作室：AIGC 图像与视频、ComfyUI 与 LoRA 工作流、AI 短剧、程序化影像及 AI 辅助创作。' : 'The studio of P. ÆVRYX: AI images and video, ComfyUI and LoRA workflows, short films, procedural visuals and AI-assisted production.';
       document.querySelectorAll('[data-t]').forEach((n) => { n.textContent = t[n.dataset.t]; });
       document.getElementById('to-room').href = `./?lang=${lang}`;
       document.getElementById('lang').textContent = t.lang;
@@ -155,12 +152,15 @@
 
       document.getElementById('sections').replaceChildren(...out);
       document.getElementById('foot').textContent = t.foot;
+      labelLanguageButton(document.getElementById('lang'), lang);
+      localisePageLinks(lang);
+      if (persist) rememberLanguage(lang); else updateLanguageUrl(lang);
     }
     document.getElementById('lang').addEventListener('click', () => {
       lang = lang === 'en' ? 'zh' : 'en';
-      try { localStorage.setItem('lang', lang); } catch { /* private mode */ }
-      render();
+      render(true);
     });
+    onLanguageChange(next => { if (next !== lang) { lang = next; render(); } });
     render();
   </script>
 </body>

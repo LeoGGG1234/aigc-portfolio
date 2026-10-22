@@ -84,7 +84,7 @@ const TEXT = {
   "。": "."
 };
 
-import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange } from './language.js?v=20261022';
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261022-language-fix-v1';
 
 // Keep existing anchors, download elements and inline code intact.
 const entries = [];
@@ -103,11 +103,6 @@ const nav = document.querySelector('.materials-nav');
 const meta = document.querySelector('meta[name="description"]');
 const zhTitle = document.title;
 const zhDescription = meta.content;
-const links = [...document.querySelectorAll('a[href]')].filter(a => {
-  if (a.hasAttribute('download')) return false;
-  const u = new URL(a.href);
-  return u.origin === location.origin && (u.pathname === new URL('./', location.href).pathname || /\/(?:portfolio\.html|materials\.html|room\/(?:index\.html|text\.html|mv\.html|short-drama\.html)?)$/.test(u.pathname));
-});
 let lang = readLanguage('en');
 function render(next, persist = false) {
   lang = next;
@@ -120,9 +115,9 @@ function render(next, persist = false) {
   button.lang = lang === 'zh' ? 'en' : 'zh-CN';
   button.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换为中文');
   button.title = lang === 'zh' ? 'English' : '中文';
-  for (const a of links) { const u = new URL(a.href); u.searchParams.set('lang', lang); a.href = u.href; }
-  if (persist) rememberLanguage(lang);
+  localisePageLinks(lang);
+  if (persist) rememberLanguage(lang); else updateLanguageUrl(lang);
 }
 button.addEventListener('click', () => render(lang === 'zh' ? 'en' : 'zh', true));
-onLanguageChange(next => { render(next); updateLanguageUrl(next); });
+onLanguageChange(next => { if (next !== lang) render(next); });
 render(lang);

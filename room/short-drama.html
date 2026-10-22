@@ -104,6 +104,8 @@
     </footer>
   </main>
   <script type="module">
+  import {readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks, labelLanguageButton} from '../language.js?v=20261022-language-fix-v1';
+
     const en = {
       back:'Back to the studio',eyebrow:'Creative practice',title:'AI Football Short Production',
       lead:'Production exercises based on ideas from an Instagram AI football-comedy creator. I work with agents on model use, footage selection, editing and sound, translating references into generation requirements and complete shorts.',
@@ -121,18 +123,28 @@
       fiction:'These are AI parody exercises. Generated scenes and fictional events are dramatizations, rather than real interviews or match records. Characters, clubs and brands are third-party; the ideas reference Instagram football-comedy videos; style research references @junioraivideos.'
     };
     const zh = Object.fromEntries(Array.from(document.querySelectorAll('[data-copy]'),n=>[n.dataset.copy,n.textContent]));
-    let saved; try { saved=localStorage.getItem('lang'); if(saved)try{saved=JSON.parse(saved);}catch{} }catch{}
-    let lang = new URLSearchParams(location.search).get('lang') || saved || 'zh';
-    if(!['zh','en'].includes(lang))lang='zh';
-    function render(){
+    let lang=readLanguage('zh');
+    const videoLabels=[
+      ['Who Is Yamal?，完整 AI 搞笑短片','Who Is Yamal?, complete AI comedy short'],
+      ['Other Areas，完整 AI 搞笑短片','Other Areas, complete AI comedy short'],
+      ['Seedance 2.5，采访生成测试','Seedance 2.5 generated interview test'],
+      ['Kling 3.0，采访生成测试','Kling 3.0 generated interview test']
+    ];
+    function render(persist=false){
       const copy=lang==='en'?en:zh;
       document.documentElement.lang=lang==='zh'?'zh-CN':'en';
       document.title=`${copy.title} · P. ÆVRYX`;
+      document.querySelector('meta[name="description"]').content=lang==='zh'?'P. ÆVRYX 的 AI 足球短片制作练习：剧本、分镜、角色表演、生成素材审片与剪辑。':'AI football comedy studies by P. ÆVRYX: scripts, shot design, character performance, generated-footage review and editing.';
       document.querySelectorAll('[data-copy]').forEach(n=>{n.textContent=copy[n.dataset.copy];});
+      document.querySelector('nav').setAttribute('aria-label',lang==='zh'?'页面导航':'Page navigation');
+      document.querySelectorAll('video').forEach((video,i)=>video.setAttribute('aria-label',videoLabels[i][lang==='zh'?0:1]));
       document.getElementById('language').textContent=lang==='zh'?'English':'中文';
-      document.getElementById('back').href=`./?lang=${lang}`;
+      labelLanguageButton(document.getElementById('language'),lang);
+      localisePageLinks(lang);
+      if(persist)rememberLanguage(lang);else updateLanguageUrl(lang);
     }
-    document.getElementById('language').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';try{localStorage.setItem('lang',lang);}catch{}const u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u);render();});
+    document.getElementById('language').addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';render(true);});
+    onLanguageChange(next=>{if(next!==lang){lang=next;render();}});
     render();
   </script>
 </body>

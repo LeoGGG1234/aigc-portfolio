@@ -29,8 +29,8 @@
     "music": ""
   },
   "about": {
-    "zh": "我是 Petra Aevryx（P. ÆVRYX），有 3 年 AI 工具使用经验，主要进行 AI 视频生成与制作、ComfyUI 工作流搭建与调试，以及 Agent 协作。现有作品包括《Twenty-Four Frames》98 秒 MV 完整剪辑版、两条参考 Instagram 创意制作的足球搞笑短片、《雨停之前》43 秒叙事开场与《The Bass》四角色 MMD。创作中负责方向、视觉参考、分镜、素材筛选与审片，与 Agent 协作调用模型、调试辅助脚本并整理后期与版本记录；另有角色与风格 LoRA 实践及数据整理与治理经历。目前关注上海的 AIGC 与创意技术岗位。",
-    "en": "I’m Petra Aevryx (P. ÆVRYX). I have three years of experience using AI tools, focusing on AI video generation and production, building and debugging ComfyUI workflows, and collaborating with agents. My work includes the 98-second complete edit of Twenty-Four Frames, two football comedy shorts based on ideas from Instagram, the 43-second opening of Before the Rain Stops, and the four-character MMD film The Bass. I define the direction, visual references and shot goals, select footage and review revisions, working with agents on model use, supporting scripts, finishing and version records. I also have character and style LoRA practice and a background in data organisation. I’m interested in AIGC and creative technology roles in Shanghai."
+    "zh": "我是 P. ÆVRYX，有 3 年 AI 工具使用经验，主要进行 AI 视频生成与制作、ComfyUI 工作流搭建与调试，以及 Agent 协作。现有作品包括《Twenty-Four Frames》98 秒 MV 完整剪辑版、两条参考 Instagram 创意制作的足球搞笑短片、《雨停之前》43 秒叙事开场与《The Bass》四角色 MMD。创作中负责方向、视觉参考、分镜、素材筛选与审片，与 Agent 协作调用模型、调试辅助脚本并整理后期与版本记录；另有角色与风格 LoRA 实践及数据整理与治理经历。目前关注上海的 AIGC 与创意技术岗位。",
+    "en": "I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video generation and production, building and debugging ComfyUI workflows, and collaborating with agents. My work includes the 98-second complete edit of Twenty-Four Frames, two football comedy shorts based on ideas from Instagram, the 43-second opening of Before the Rain Stops, and the four-character MMD film The Bass. I define the direction, visual references and shot goals, select footage and review revisions, working with agents on model use, supporting scripts, finishing and version records. I also have character and style LoRA practice and a background in data organisation. I’m interested in AIGC and creative technology roles in Shanghai."
   },
   "links": [
     {
@@ -184,7 +184,7 @@
       ],
       "description": {
         "zh": "《The Bass》崩铁记忆队 MMD 已完成：15.33 秒，720 × 1280、30fps。采用 PMX / VMD 与 Blender 制作，涵盖四角色镜头、表情、光影和局部接触修订；另有 13 秒 3D 驱动 AI 动作实验。封面左、中为 MMD 选帧，右为 AI 实验选帧。打开详情可播放 MMD 成片。角色、动作及相关素材为第三方，工程与脚本含 Agent 协作。",
-        "en": "The Bass HSR Memory Team MMD is complete: 15.33 seconds, 720 × 1280 at 30 fps. Made with PMX / VMD and Blender, with revisions to four-character camera cuts, expressions, lighting and local contact. The separate 13-second 3D-driven AI motion study is also retained. Left and centre cover frames are from MMD; the right frame is from the AI study. Open the project page to play the completed MMD film. Characters, motion and related assets are third-party; scene and script work was agent-assisted."
+        "en": "The Bass HSR Remembrance Team MMD is complete: 15.33 seconds, 720 × 1280 at 30 fps. Made with PMX / VMD and Blender, with revisions to four-character camera cuts, expressions, lighting and local contact. The separate 13-second 3D-driven AI motion study is also retained. Left and centre cover frames are from MMD; the right frame is from the AI study. Open the project page to play the completed MMD film. Characters, motion and related assets are third-party; scene and script work was agent-assisted."
       },
       "link": "mmd-dance.html"
     },
