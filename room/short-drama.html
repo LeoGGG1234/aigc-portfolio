@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="P. ÆVRYX 的 AI 短剧创作练习：剧本、分镜、角色表演、生成素材审片与剪辑。">
-  <title>AI 短剧创作 · P. ÆVRYX</title>
+  <meta name="description" content="P. ÆVRYX 的 AI 足球短片制作练习：剧本、分镜、角色表演、生成素材审片与剪辑。">
+  <title>AI 足球短片制作 · P. ÆVRYX</title>
   <style>
     :root { --paper:#f5efe6; --ink:#241f1b; --soft:#74665a; --line:#241f1b24; --accent:#965c27; --screen:#e7ded2; }
     * { box-sizing:border-box; }
@@ -57,9 +57,9 @@
   <main>
     <nav aria-label="Page navigation"><a id="back" href="./?lang=zh">← <span data-copy="back">返回工作室</span></a><button id="language" type="button">English</button></nav>
     <header>
-      <p class="eyebrow">LEO · <span data-copy="eyebrow">创作能力</span></p>
-      <h1 data-copy="title">AI 短剧创作</h1>
-      <p class="lead" data-copy="lead">从一个反转的点子，到剧本、分镜、角色表演与剪辑。围绕足球题材，练习几十秒内的铺垫、停顿和笑点。</p>
+      <p class="eyebrow">P. ÆVRYX · <span data-copy="eyebrow">创作能力</span></p>
+      <h1 data-copy="title">AI 足球短片制作</h1>
+      <p class="lead" data-copy="lead">参考 Instagram 足球搞笑 AI 视频博主的创意，与 Agent 协作完成模型调用、素材筛选、剪辑和声音处理。这里展示参考内容如何转化为生成要求与完整短片。</p>
       <ul class="tags"><li data-copy="tag1">剧本与分镜</li><li data-copy="tag2">角色与台词节奏</li><li data-copy="tag3">生成素材审片</li><li data-copy="tag4">剪辑与声音</li></ul>
     </header>
     <section>
@@ -100,13 +100,13 @@
     </section>
     <footer>
       <p data-copy="credit">创作判断、审片与迭代取舍由我把握，剧本、生成和编辑执行与 Agent 协作。工具包括 Higgsfield、Seedance 2.5、Kling 3.0 与 FFmpeg。</p>
-      <p data-copy="fiction">这些是 AI 戏仿练习，画面和虚构情节为 AI 演绎，非真实采访或比赛记录。角色、球队及品牌来自第三方；风格研究参考 @junioraivideos。</p>
+      <p data-copy="fiction">这些是 AI 戏仿练习，画面和虚构情节为 AI 演绎，非真实采访或比赛记录。角色、球队及品牌来自第三方；创意参考 Instagram 足球搞笑 AI 视频；风格研究参考 @junioraivideos。</p>
     </footer>
   </main>
   <script type="module">
     const en = {
-      back:'Back to the studio',eyebrow:'Creative practice',title:'AI Short-form Storytelling',
-      lead:'From a reversal in an idea to a script, shot design, character performance and an edit. Football parody is a way to practise setup, pauses and comic payoffs in a few dozen seconds.',
+      back:'Back to the studio',eyebrow:'Creative practice',title:'AI Football Short Production',
+      lead:'Production exercises based on ideas from an Instagram AI football-comedy creator. I work with agents on model use, footage selection, editing and sound, translating references into generation requirements and complete shorts.',
       tag1:'Scripts & shot design',tag2:'Performance & dialogue',tag3:'Generated-footage review',tag4:'Editing & sound',projects:'Short-form studies',
       yamalStatus:'26 seconds · Complete short',yamal:'An interview sets up the joke, a character emerges from a hedge, and an aftermath scene and text cards close it. The complete short combines the more complete dialogue from one generated version with the more effective reveal from another.',
       yamalNote:'Review focus: expression, reveal timing, and matching the light and colour between takes.',
@@ -117,8 +117,8 @@
       skill3:'References & generation',skill3Body:'Organise character and setting references, compare models and takes, and check identity, costume and shot behaviour.',
       skill4:'Review & editing',skill4Body:'Check character and spatial continuity, select usable takes, and adjust captions, sound and cutting rhythm.',
       testTitle:'Interview shots · Model comparison',testNote:'Two local generated tests of about five seconds each, exploring expression, action and sound in an interview setup. These are exercises made after creator-style research, rather than original clips by @junioraivideos.',
-      credit:'I guide the creative choices, output review and revisions, collaborating with agents on scripts, generation and editing. Tools include Higgsfield, Seedance 2.5, Kling 3.0 and FFmpeg.',
-      fiction:'These are AI parody exercises. Generated scenes and fictional events are dramatizations, rather than real interviews or match records. Characters, clubs and brands are third-party; the style research references @junioraivideos.'
+      credit:'The ideas reference an Instagram creator. I guide generation goals, output review and revisions, collaborating with agents on scripts, generation and editing. Tools include Higgsfield, Seedance 2.5, Kling 3.0 and FFmpeg.',
+      fiction:'These are AI parody exercises. Generated scenes and fictional events are dramatizations, rather than real interviews or match records. Characters, clubs and brands are third-party; the ideas reference Instagram football-comedy videos; style research references @junioraivideos.'
     };
     const zh = Object.fromEntries(Array.from(document.querySelectorAll('[data-copy]'),n=>[n.dataset.copy,n.textContent]));
     let saved; try { saved=localStorage.getItem('lang'); if(saved)try{saved=JSON.parse(saved);}catch{} }catch{}
