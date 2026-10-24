@@ -2,7 +2,7 @@
 
 公开入口：https://leoggg1234.github.io/aigc-portfolio/
 
-整理《Twenty-Four Frames》98 秒 MV 完整剪辑版（v30）、《Who Is Yamal?》26 秒与《Other Areas》64 秒两部完整 AI 足球戏仿短片、《The Bass》15.33 秒崩铁记忆队 MMD 成片、现有《雨停之前》开场、模型调用、ComfyUI 工作流搭建与调试及项目方法说明。网站不依赖构建工具或外部字体。
+整理《Twenty-Four Frames》98 秒 MV 完整剪辑版（v32）、《Who Is Yamal?》26 秒与《Other Areas》64 秒两部完整 AI 足球戏仿短片、《The Bass》15.33 秒崩铁记忆队 MMD 成片、现有《雨停之前》开场、模型调用、ComfyUI 工作流搭建与调试及项目方法说明。网站不依赖构建工具或外部字体。
 
 公开内容包含两部完整短片、MMD 成片、叙事开场、局部修改对照、角色 LoRA 案例的 ComfyUI JSON 配置示例及整理后的说明。LoRA 样图、训练图与权重、13 秒 AI 动作实验视频及受限源素材不在本仓库中。《The Bass》MMD 仅发布交付视频与封面，不上传原模型、动作、音乐源文件或着色预设。
 

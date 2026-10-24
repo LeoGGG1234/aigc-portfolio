@@ -70,7 +70,7 @@
       },
       "year": "2026",
       "type": "video",
-      "src": "media/portfolio/mv/twenty-four-frames-v30-720p.mp4",
+      "src": "media/portfolio/mv/twenty-four-frames-v32-720p.mp4",
       "poster": "media/portfolio/mv/twenty-four-frames-v30-poster.jpg",
       "tools": [
         "Nano Banana Pro",
@@ -80,8 +80,8 @@
         "Agent collaboration"
       ],
       "description": {
-        "zh": "98 秒竖屏 MV 完整剪辑版，以胶卷串起角色一天的经历，结合线稿人物与胶片质感场景。我负责创意、角色视觉设定、分镜、素材筛选与审片，与 Agent 协作完成音乐方向、模型调用、素材处理及剪辑。网页播放 v30 的 720p 分享版，1080p 母版保留；49 指剪辑镜头数量。",
-        "en": "A 98-second complete vertical MV edit following a character’s day through a roll of film, combining line-art characters with film-textured settings. I guide the concept, character design, shot goals, footage selection and review, collaborating with agents on music direction, model use, asset processing and editing. This page plays the v30 720p sharing copy; the 1080p master is retained. The 49 shots refer to the edit."
+        "zh": "98 秒竖屏 MV 完整剪辑版，以胶卷串起角色一天的经历，结合线稿人物与胶片质感场景。我负责创意、角色视觉设定、分镜、素材筛选与审片，与 Agent 协作完成音乐方向、模型调用、素材处理及剪辑。网页播放 v32 的 720p 分享版，1080p 母版保留；49 指剪辑镜头数量。",
+        "en": "A 98-second complete vertical MV edit following a character’s day through a roll of film, combining line-art characters with film-textured settings. I guide the concept, character design, shot goals, footage selection and review, collaborating with agents on music direction, model use, asset processing and editing. This page plays the v32 720p sharing copy; the 1080p master is retained. The 49 shots refer to the edit."
       },
       "link": "mv.html"
     },

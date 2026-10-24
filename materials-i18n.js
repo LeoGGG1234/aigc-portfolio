@@ -3,7 +3,7 @@ const TEXT = {
   "← 返回作品入口": "← Back to portfolio",
   "项目与工作流说明": "Project & Workflow Notes",
   "从已有文件和记录出发，说明做了什么、可以查看什么，以及材料适用的范围。": "Notes drawn from existing files and records: what I did, what is available to review, and the limits of the materials.",
-  "98 秒竖屏 MV 完整剪辑版，以胶卷串起角色一天的经历。网页播放现有 v30 的 720p 分享文件，1080p 母版保留；49 为剪辑镜头数量。": "A 98-second complete vertical MV edit, with a strip of film connecting moments from a character’s day. The web player uses the existing v30 720p sharing file; the 1080p master is retained. The number 49 refers to shots in the edit.",
+  "98 秒竖屏 MV 完整剪辑版，以胶卷串起角色一天的经历。网页播放现有 v32 的 720p 分享文件，1080p 母版保留；49 为剪辑镜头数量。": "A 98-second complete vertical MV edit, with a strip of film connecting moments from a character’s day. The web player uses the existing v32 720p sharing file; the 1080p master is retained. The number 49 refers to shots in the edit.",
   "我的贡献与 Agent 协作": "My Contribution & Agent Collaboration",
   "负责创意、角色视觉设定、分镜、生成素材筛选与审片。与 Agent 协作确定曲风和歌词方向，使用 Suno 生成并筛选歌曲；按镜头调用 Nano Banana Pro、Wan 3.0 和 Kling，结合音乐组织剪辑，与 Agent 协作修正白边及人物颜色漂移。": "I developed the concept, character visuals and storyboards, selected generated footage and reviewed the results. With agents, I defined the musical style and lyrical direction, generated and selected songs with Suno, used Nano Banana Pro, Wan 3.0 and Kling for individual shots, edited to the music, and corrected white fringes and character colour drift.",
   "保留参考、提示词、费用和修改版本。此处为个人创作与现有制作记录，不包含商业投放或传播效果数据。": "References, prompts, costs and revision versions are retained. These are records of a personal project and its production; they do not include commercial campaign or audience-performance data.",

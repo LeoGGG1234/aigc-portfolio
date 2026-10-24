@@ -20,7 +20,7 @@ const TEXT = {
   "AI 视频生成与制作": "AI Video Generation & Production",
   "先看 MV 完整剪辑版，再看参考创意制作的足球搞笑短片。围绕具体画面目标调用模型，与 Agent 协作完成素材筛选、剪辑和后期。": "Start with the complete MV edit, then explore the football comedy shorts based on reference ideas. I select and use models for specific visual goals, working with agents on footage selection, editing and post-production.",
   "MV · 98 秒": "MV · 98 seconds",
-  "完整剪辑版 · v30": "Complete edit · v30",
+  "完整剪辑版 · v32": "Complete edit · v32",
   "浏览器不支持视频播放，请": "Your browser does not support video playback. Please",
   "打开 MV": "open the MV",
   "以胶卷串起角色一天的经历，将线稿人物与胶片质感场景结合，以音乐组织镜头和情绪。": "A strip of film connects moments from a character’s day. Line-art characters meet film-textured settings, with music shaping the sequence and emotional rhythm.",
