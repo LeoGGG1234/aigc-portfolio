@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>项目与工作流说明 · P. ÆVRYX</title><link rel="stylesheet" href="styles.css?v=20261017-resume"><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta name="description" content="现有作品的项目贡献、制作记录、ComfyUI 与 LoRA 配置、依赖、署名和材料展示范围。">
+<style>
+.materials-bilingual .nav-inner{position:relative;flex-wrap:wrap;padding-top:14px;padding-bottom:14px;gap:12px 20px}
+.materials-nav{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px}
+.materials-nav a{white-space:nowrap}
+.materials-lang{font:13px/1.3 -apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;min-width:44px;min-height:36px;padding:5px 11px;cursor:pointer}
+.materials-lang:hover{color:var(--accent);border-color:var(--accent)}
+.materials-bilingual h1,.materials-bilingual h2,.materials-bilingual h3{overflow-wrap:break-word}
+.materials-bilingual .doc-section p,.materials-bilingual .doc-section li,.materials-bilingual td,.materials-bilingual code{overflow-wrap:anywhere}
+.materials-bilingual .table-wrap table{table-layout:fixed}
+.materials-bilingual th:first-child{width:38%}
+@media(max-width:600px){
+  .materials-bilingual .nav-inner{display:block;padding-top:11px;padding-bottom:11px}
+  .materials-bilingual .brand{display:block;width:fit-content;padding-right:60px;margin-bottom:9px}
+  .materials-nav{gap:10px 20px;font-size:12px}
+  .materials-nav .return{font-size:12px}
+  .materials-lang{position:absolute;right:0;top:9px}
+  .materials-bilingual .subhero{padding-top:32px;padding-bottom:24px}
+  .materials-bilingual .subhero h1{font-size:30px;line-height:1.3}
+  .materials-bilingual .doc-section{padding:26px 0}
+  .materials-bilingual .doc-section h2{font-size:22px;line-height:1.4}
+  .materials-bilingual th,.materials-bilingual td{padding:11px 8px;font-size:12px}
+  .materials-bilingual th:first-child,.materials-bilingual td:first-child{padding-left:8px}
+  html{scroll-padding-top:118px}
+}
+</style><script type="module" src="/preview-notice.js"></script>
+</head><body class="materials-bilingual"><a href="#materials-main" class="skip">跳到主要内容</a><header class="nav"><div class="wrap nav-inner"><a class="brand" href="portfolio.html">P. ÆVRYX<small>VISUAL & WORKFLOW</small></a><nav class="materials-nav" aria-label="材料导航"><a href="portfolio.html" class="return">← 返回作品入口</a><a href="./" class="return">3D 主页 ↗</a><button id="materials-lang" class="materials-lang" type="button" aria-label="Switch to English" title="English">EN</button></nav></div></header><main id="materials-main" class="wrap"><header class="subhero"><div class="eyebrow">PROJECT NOTES / EXISTING MATERIALS</div><h1>项目与工作流说明</h1><p>从已有文件和记录出发，说明做了什么、可以查看什么，以及材料适用的范围。</p></header>
+<!-- Preserve the legacy incoming anchor without exposing resume downloads. -->
+<div id="resume" aria-hidden="true"></div>
+<section id="mv" class="doc-section"><h2>MV · Twenty-Four Frames</h2><p>98 秒竖屏 MV 完整剪辑版，以胶卷串起角色一天的经历。本测试站播放现有 v32 的约 20 秒预览，1080p 母版保留；49 为剪辑镜头数量。</p><h3>我的贡献与 Agent 协作</h3><p>负责创意、角色视觉设定、分镜、生成素材筛选与审片。与 Agent 协作确定曲风和歌词方向，使用 Suno 生成并筛选歌曲；按镜头调用 Nano Banana Pro、Wan 3.0 和 Kling，结合音乐组织剪辑，与 Agent 协作修正白边及人物颜色漂移。</p><p>保留参考、提示词、费用和修改版本。此处为个人创作与现有制作记录，不包含商业投放或传播效果数据。</p><a class="text-link" href="room/mv.html">播放 MV 与阅读说明 →</a></section>
+<section id="shorts" class="doc-section"><h2>01 · AI 短剧创作</h2>
+<p>《Who Is Yamal?》为 26.125 秒完整短片，720 × 1280；《Other Areas》为 64.053 秒完整短片，1080 × 1920。测试首页展示两部短片的前 20 秒预览，均可手动播放。</p>
+<h3>从参考到镜头</h3><p>《Who Is Yamal?》以采访、人物显现和赛后反差组织笑点，将不同版本的台词与显现镜头组合。《Other Areas》围绕采访、更衣室密谋和破门打断设计反转，用关门后的表情变化、队友庆祝及剪辑停顿衔接叙事。</p>
+<h3>我的贡献与 Agent 协作</h3><p>创意参考 Instagram 足球搞笑 AI 视频博主，本人负责生成目标、人物表演要求、视觉参考、审片与版本选择；与 Agent 协作整理剧本、调用 Higgsfield / Seedance 2.5 生成镜头，以及完成字幕、片尾、音效与 FFmpeg 剪辑。保留剧本、镜头要求、生成版本和成片，便于核对迭代过程。</p>
+<p class="quiet">两部均为 AI 足球戏仿，人物表现和情节为虚构演绎，非真实采访或比赛记录。人物、球队及品牌来自第三方；创意参考 Instagram 足球搞笑 AI 视频；风格研究参考 @junioraivideos。本页展示的是本人和 Agent 协作完成的生成与剪辑结果。</p>
+<a class="text-link" href="portfolio.html#shorts">返回两部完整短片 →</a></section>
+<section id="mmd" class="doc-section"><h2>02 · 《The Bass》崩铁记忆队 MMD</h2>
+<p>已完成的四角色 MMD 舞蹈，15.333 秒、720 × 1280、30fps，H.264 / AAC。首页展示完整成片，可手动播放。</p>
+<h3>制作与个人贡献</h3><p>角色为《崩坏：星穹铁道》的遐蝶、风堇、昔涟和长夜月，采用 PMX / VMD 与 Blender 制作，围绕俯视和正面镜头组织角色表演。本人负责角色与视觉要求、构图、表情审阅和版本取舍，与 Agent 协作完成工程操作及后期。</p>
+<p>迭代涵盖光影、手脸接触、风堇眼形和长夜月马尾遮挡等细节，保留局部短样、历史版本、工程与复查记录。网页使用已完成的交付视频。</p>
+<h3>素材署名</h3><ul><li>角色与模型：米哈游 / HoYoverse。</li><li>动作与镜头：Snaksil。</li><li>音乐：DJ Wave - 巴巴贝斯 The Bass。</li><li>着色预设：小二。</li></ul>
+<p class="quiet">相关角色、模型、动作、音乐和预设来自第三方。本片展示的是素材整合、镜头与视觉调整及审片迭代，不主张原创角色建模或原创动作设计。另有 13 秒 3D 驱动 AI 动作实验，材料与制作范围单独说明。</p>
+<a class="text-link" href="portfolio.html#mmd">返回完整成片 →</a></section>
+<section id="film" class="doc-section"><h2>03 · 《雨停之前》</h2><p>现有 43.083 秒开场由两段已有 AI 视频串联，后期版本整理了电视画面替换、音频接缝处理和统一导出流程。原始视频及历史版本保留；当前展示的是后期流程预览。</p><h3>工作链条</h3><p>故事与参考设计 → 预演／镜头要求 → AI 视频生成与筛选 → 局部画面合成 → 声音接缝处理 → 规格检查与版本归档。</p><h3>贡献与实现</h3><p>本人提出创作、筛选与修改目标，整理素材和约束并参与审片；Blender 场景、脚本和流程包含 AI 辅助。后期流程集成第三方开源工具的音频混合与视频拼接能力，本地适配电视画面、音频修正与导出规格。</p><p>其中使用的 <a href="https://github.com/calesthio/OpenMontage/tree/9327439db69021ab4b0e2776729bf3b58fdb5a87" target="_blank" rel="noopener noreferrer">OpenMontage 固定版本</a>为外部开源上游，许可为 AGPL-3.0。它是工具集成来源，不属于本人原创项目。</p><h3>已有验证记录</h3><ul><li>输出为 1280 × 720、24fps、1034 帧，BT.709，48kHz 双声道。</li><li>历史同机两次复跑，解码视频帧与 PCM 音频哈希一致；不推及跨机器、跨版本确定性。</li><li>修改电视边缘羽化参数后，记录变化区域与阶段缓存行为。</li><li>保留缺少输入时提前报错、修正配置后恢复，以及缺失衍生产物的重建记录。</li><li>原始输入通过 SHA256 核对，输出边界用于保护源文件。</li></ul><p class="quiet">上述为历史技术记录；本次仅制作轻量预览，未重跑原后期验证。技术检查不代表声音自然度或最终审美验收通过。现有电视合成针对近固定镜头，不属于通用遮挡追踪方案。</p><a class="text-link" href="portfolio.html#film">返回视频与对照图 →</a></section>
+<section id="comfy" class="doc-section"><h2>04 · 模型调用与 ComfyUI 工作流实践</h2><p>围绕具体任务选择和调用模型，在 ComfyUI 中搭建、调整文生图、图生图及 LoRA 测试链路；配置基模、VAE、采样与输出参数，结合阶段结果排查依赖、节点兼容与画面偏差。</p><p>图像生成实践涉及 SDXL 系列、Anima、Krea 2 等模型；视频生成实践涉及 Seedance 2.5、MiniMax H3、Wan 2.x 系列。按实际使用方式分别记录平台生成输入与 ComfyUI 工作流参数。</p><p>角色 LoRA 案例保留了 15 对训练图文、1500 步／10 epoch 训练记录、16 张历史评估样图及推理配置。本人参与数据与概念整理、参数取舍和结果审阅；配置、检查及文档含 AI 辅助。</p><h3>角色 LoRA 案例配置示例</h3><div class="table-wrap"><table><thead><tr><th>文件</th><th>用途与默认值</th></tr></thead><tbody><tr><td><a href="materials/basic-dual-scene.json" download>全身与局部配置 JSON</a></td><td>全身与局部概念；final epoch10，模型／CLIP 强度均为 0.8。</td></tr><tr><td><a href="materials/closeup-pose.json" download>近景与姿态配置 JSON</a></td><td>近景身份与提示词姿态测试；final epoch10，模型／CLIP 强度均为 0.7。</td></tr></tbody></table></div><p>示例使用 CheckpointLoaderSimple、LoraLoader、CLIPTextEncode、EmptyLatentImage、KSampler、VAEDecode 和 SaveImage，展示模型与 LoRA 加载、条件配置、采样解码及输出链路。近景／姿态配置通过提示词测试，没有使用骨骼或 ControlNet 姿态控制节点。</p><h3>依赖与运行范围</h3><ul><li>基础模型引用：<code>waiIllustriousSDXL_v170.safetensors</code>。</li><li>LoRA 引用：<code>sotheby_lawson_ilxl_v1.safetensors</code>，为历史训练的 final epoch10 权重。</li><li>本页仅提供现有工作流 JSON 阅读副本，不提供上述模型文件、训练图或样图。</li><li>需自行具备兼容 ComfyUI 环境和合法可用的依赖；本次没有重新导入或执行 GPU 推理。</li></ul><h3>评估材料怎么理解</h3><p>历史记录比较检查点、LoRA 强度、提示词详细程度，以及身份、服装、姿态和局部细节的取舍。16 张样图没有完整逐图执行快照，不能将此比较表述为严格控制实验、通用最优参数或统计 benchmark。</p><p class="quiet">第三方角色、服装、图源及模型的权利不因本项目而转移。样图与完整训练材料仅供约定范围内的私下审阅；公开 JSON 不附模型或图像许可。</p><a class="text-link" href="portfolio.html#comfy">返回工作流入口 →</a></section>
+<section id="dance" class="doc-section"><h2>05 · 3D 驱动 AI 动作</h2><p>现有 13.042 秒视频实践连接第三方 VRM／VMD、Blender 动作驱动、首帧风格、AI 生成、审片与本地后期。已有版本迭代针对驱动发夹对参考发饰的干扰，调整驱动材质可见性与参考要求后进行比较。</p><p>本人负责需求、风格与成片选择、审片及迭代决策；管线代码含 AI 辅助。使用 VRoid 样例角色，动作来源为 winglayer／猪肉屑炳，编舞来源为我是君君呀。该项目不主张原创角色建模、原创动作或全部代码独立开发。</p><p>音乐记录为私用，动作资料不允许再分发，AI 使用许可未明确。故公开入口仅展示流程与贡献说明；视频及逐秒检查图可在约定的私下审阅范围内提供，不上传原角色、动作与音乐文件。</p><a class="text-link" href="mailto:cnmrge@gmail.com?subject=AIGC%20%E7%A7%81%E4%B8%8B%E5%AE%A1%E9%98%85%E6%9D%90%E6%96%99">联系索取私下审阅材料 →</a></section>
+<section id="scope" class="doc-section"><h2>来源与展示范围</h2><p>本网站整理既有作品与工作流材料，没有新增训练、生成或付费媒体调用。本测试站长视频仅播放约 20 秒预览，以下时长描述原作。材料涵盖《Twenty-Four Frames》98 秒 MV 完整剪辑版、《Who Is Yamal?》《Other Areas》两部完整短片、《The Bass》崩铁 MMD 完整成片、项目介绍、《雨停之前》的现有开场及局部对照、ComfyUI 配置示例和整理后的模型调用、流程搭建与调试说明。</p><p>《雨停之前》的原始视频来自创作者通过 Higgsfield 生成并提供的素材，使用项目中已有的 AI 参考图；没有额外插入第三方电影片段或购买音乐。部分早期参考图的精确生成工具版本未完整留存，作品使用仍受原服务条款约束。</p><p>LoRA 训练与 13 秒 AI 动作实验涉及第三方图源、模型、动作或音乐，完整过程材料保留在私下审阅包中。《The Bass》MMD 成片按上述署名展示，未上传原模型、动作文件或着色预设。公开说明不代表对第三方内容拥有独占版权或无条件商业许可。</p><p>更详细的脚本、配置、日志及历史清单可按需审阅。离线精选包为阅读材料，未包含完整运行环境，不作为开箱即用或跨机器复现承诺。</p><p class="quiet">此入口用于展示既有实践；未经收件人约定，不会发送招聘材料或代为投递。</p></section></main><footer class="wrap footer"><span>P. ÆVRYX · 项目与工作流说明</span><a href="portfolio.html">返回作品入口</a></footer><script type="module" src="materials-i18n.js?v=20261025-mv32-v1"></script></body></html>
