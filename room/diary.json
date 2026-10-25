@@ -1,0 +1,34 @@
+{
+  "entries": [
+    {
+      "date": "2026-10-17",
+      "title": {
+        "en": "Sample page: how this diary works",
+        "zh": "示例页：这本日记怎么用"
+      },
+      "body": {
+        "en": "This is a sample entry. Open the site with ?write at the end of the address to write new pages; they are kept in your browser until you press Export and replace site/diary.json with the downloaded file.\n\nEach page remembers the season, weather and time of day the room was in when you wrote it.",
+        "zh": "这是一篇示例日记。在网址末尾加上 ?write 打开网站即可写新的一页；内容先保存在你的浏览器里，按“导出”后用下载的文件替换 site/diary.json 即可发布。\n\n每一页都会记下写它时房间里的季节、天气和时间。"
+      },
+      "weather": "rain",
+      "season": "autumn",
+      "time": "night",
+      "mood": ""
+    },
+    {
+      "date": "2026-10-16",
+      "title": {
+        "en": "Sample page: the attic",
+        "zh": "示例页：阁楼"
+      },
+      "body": {
+        "en": "A second sample, so the page turn has somewhere to go. Delete both when you add your own.",
+        "zh": "第二篇示例，让翻页有地方可翻。写下自己的日记后，把这两篇删掉即可。"
+      },
+      "weather": "clear",
+      "season": "autumn",
+      "time": "dusk",
+      "mood": ""
+    }
+  ]
+}

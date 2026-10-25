@@ -1,0 +1,526 @@
+{
+  "site": {
+    "name": {
+      "zh": "P. ÆVRYX",
+      "en": "P. ÆVRYX"
+    },
+    "role": {
+      "zh": "AIGC 视觉与工作流",
+      "en": "AIGC Visuals · Workflows"
+    },
+    "tagline": {
+      "zh": "从镜头目标出发，让生成、控制与后期衔接起来。",
+      "en": "Connecting visual ideas, generation, control and finishing."
+    },
+    "defaultLanguage": "zh",
+    "location": {
+      "label": {
+        "en": "Shanghai",
+        "zh": "上海"
+      },
+      "lat": 31.23,
+      "lon": 121.47
+    },
+    "catName": {
+      "en": "Mochi",
+      "zh": "麻糬"
+    },
+    "textVersionUrl": "",
+    "music": ""
+  },
+  "about": {
+    "zh": "我是 P. ÆVRYX，有 3 年 AI 工具使用经验，主要进行 AI 视频生成与制作、ComfyUI 工作流搭建与调试，以及 Agent 协作。现有作品包括《Twenty-Four Frames》98 秒 MV 完整剪辑版、两条参考 Instagram 创意制作的足球搞笑短片、《雨停之前》43 秒叙事开场与《The Bass》四角色 MMD。创作中负责方向、视觉参考、分镜、素材筛选与审片，与 Agent 协作调用模型、调试辅助脚本并整理后期与版本记录；另有角色与风格 LoRA 实践及数据整理与治理经历。目前关注上海的 AIGC 与创意技术岗位。",
+    "en": "I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video generation and production, building and debugging ComfyUI workflows, and collaborating with agents. My work includes the 98-second complete edit of Twenty-Four Frames, two football comedy shorts based on ideas from Instagram, the 43-second opening of Before the Rain Stops, and the four-character MMD film The Bass. I define the direction, visual references and shot goals, select footage and review revisions, working with agents on model use, supporting scripts, finishing and version records. I also have character and style LoRA practice and a background in data organisation. I’m interested in AIGC and creative technology roles in Shanghai."
+  },
+  "links": [
+    {
+      "label": {
+        "zh": "邮箱 · cnmrge@gmail.com",
+        "en": "Email · cnmrge@gmail.com"
+      },
+      "url": "mailto:cnmrge@gmail.com"
+    },
+    {
+      "label": {
+        "zh": "GitHub · LeoGGG1234",
+        "en": "GitHub · LeoGGG1234"
+      },
+      "url": "https://github.com/LeoGGG1234"
+    },
+    {
+      "label": {
+        "zh": "原版作品集",
+        "en": "Original portfolio"
+      },
+      "url": "https://preview.paevryx.com/portfolio.html"
+    },
+    {
+      "label": {
+        "zh": "Text-to-SQL Agent · 项目代码",
+        "en": "Text-to-SQL Agent · source"
+      },
+      "url": "https://github.com/LeoGGG1234/text-to-sql-agent"
+    }
+  ],
+  "works": [
+    {
+      "title": {
+        "zh": "Twenty-Four Frames · AI 音乐影像",
+        "en": "Twenty-Four Frames · AI Music Video"
+      },
+      "year": "2026",
+      "type": "video",
+      "src": "media/portfolio/mv/twenty-four-frames-preview-20s.mp4",
+      "poster": "media/portfolio/mv/twenty-four-frames-v30-poster.jpg",
+      "tools": [
+        "Nano Banana Pro",
+        "Wan 3.0",
+        "Kling",
+        "Suno",
+        "Agent collaboration"
+      ],
+      "description": {
+        "zh": "98 秒竖屏 MV 完整剪辑版，以胶卷串起角色一天的经历，结合线稿人物与胶片质感场景。我负责创意、角色视觉设定、分镜、素材筛选与审片，与 Agent 协作完成音乐方向、模型调用、素材处理及剪辑。本测试站播放 v32 的约 20 秒预览，1080p 母版保留；49 指剪辑镜头数量。",
+        "en": "A 98-second complete vertical MV edit following a character’s day through a roll of film, combining line-art characters with film-textured settings. I guide the concept, character design, shot goals, footage selection and review, collaborating with agents on music direction, model use, asset processing and editing. This test site plays a roughly 20-second preview from v32; the 1080p master is retained. The 49 shots refer to the edit."
+      },
+      "link": "mv.html"
+    },
+    {
+      "title": {
+        "zh": "雨停之前 · 叙事开场",
+        "en": "Before the Rain Stops · Opening"
+      },
+      "year": "2026",
+      "type": "video",
+      "src": "media/portfolio/film-opening-preview.mp4",
+      "poster": "media/portfolio/film-poster.png",
+      "tools": [
+        "Blender",
+        "Seedance 2.5",
+        "FFmpeg",
+        "AI-assisted workflow"
+      ],
+      "description": {
+        "zh": "43 秒雨夜叙事开场。我负责创意、分镜、美术参考、素材筛选与审片，并与 Agent 协作组织预演和后期流程。现有版本包含电视画面合成与音频接缝处理，声音等细节仍可改进。",
+        "en": "A 43-second narrative opening set on a rainy night. I developed the concept, shot goals and visual references, selected footage and reviewed revisions, working with agents on previs and finishing. This excerpt includes TV-screen compositing and audio-seam treatment; sound and other details remain open to refinement."
+      },
+      "link": "https://preview.paevryx.com/materials.html#film"
+    },
+    {
+      "title": {
+        "zh": "The Weave · 程序化视觉短片",
+        "en": "The Weave · Procedural Film"
+      },
+      "year": "2026",
+      "type": "video",
+      "src": "media/portfolio/the-weave-preview.mp4",
+      "poster": "media/portfolio/weave-cover.png",
+      "tools": [
+        "JavaScript",
+        "WebGL",
+        "Procedural animation",
+        "Synthesized audio"
+      ],
+      "description": {
+        "zh": "30 秒代码生成影像实验，以一根发光的线串联织机、计算机与神经网络等意象。画面、运动与声音由程序生成，探索技术结构如何成为视觉叙事；此处为压缩网页预览。",
+        "en": "A 30-second code-rendered visual experiment following a luminous thread through weaving, computing and neural-network imagery. Procedural pictures, movement and synthesized sound explore technical structure as visual storytelling. This is a compressed web preview."
+      },
+      "link": "media/portfolio/the-weave-preview.mp4"
+    },
+    {
+      "title": {
+        "zh": "雨停之前 · 电视画面合成对照",
+        "en": "Before the Rain Stops · Compositing Study"
+      },
+      "year": "2026",
+      "type": "image",
+      "src": "media/portfolio/film-before-after.jpg",
+      "tools": [
+        "FFmpeg",
+        "Compositing",
+        "Parameter comparison",
+        "AI-assisted scripting"
+      ],
+      "description": {
+        "zh": "同一镜头中原片与电视画面替换后的关键帧对照。我提出修改目标，与 Agent 协作适配脚本并复查替换范围、文字及电视外壳。该处理针对近固定镜头；对照用于检查局部变化。",
+        "en": "Matched frames before and after replacing the TV picture in the same shot. I set the revision goals and worked with agents on script adaptation and checks of the replacement area, text and TV casing. This is a near-static-shot treatment, shown to inspect local changes."
+      },
+      "link": "https://preview.paevryx.com/portfolio.html#film"
+    },
+    {
+      "title": {
+        "zh": "ComfyUI · 角色与 LoRA 测试",
+        "en": "ComfyUI · Character & LoRA Studies"
+      },
+      "year": "2026",
+      "type": "image",
+      "src": "media/portfolio/lora-photo-stack.svg",
+      "tools": [
+        "ComfyUI",
+        "Illustrious SDXL",
+        "LoRA",
+        "Kohya_ss",
+        "OneTrainer"
+      ],
+      "description": {
+        "zh": "现有 LoRA 测试中的近景、全身与姿态样图。围绕角色身份、服装和局部细节比较生成结果，调整提示词与模型强度，保留参数及版本记录。角色与基础模型来自第三方，配置、检查与文档含 AI 辅助。",
+        "en": "Existing close-up, full-body and pose samples from LoRA tests. I compare character identity, clothing and local detail, adjust prompts and model strength, and keep parameter and version records. The character and base model are third-party; configuration, checks and documentation were AI-assisted."
+      },
+      "link": "https://preview.paevryx.com/materials.html#comfy"
+    },
+    {
+      "title": {
+        "zh": "3D 舞蹈创作 · 崩铁 MMD",
+        "en": "3D Dance · HSR MMD"
+      },
+      "year": "2026",
+      "type": "image",
+      "src": "media/portfolio/dance-photo-stack.svg",
+      "tools": [
+        "MMD",
+        "Blender",
+        "PMX / VMD",
+        "AI video"
+      ],
+      "description": {
+        "zh": "《The Bass》崩铁记忆队 MMD 已完成：15.33 秒，720 × 1280、30fps。采用 PMX / VMD 与 Blender 制作，涵盖四角色镜头、表情、光影和局部接触修订；另有 13 秒 3D 驱动 AI 动作实验。封面左、中为 MMD 选帧，右为 AI 实验选帧。打开详情可播放 MMD 成片。角色、动作及相关素材为第三方，工程与脚本含 Agent 协作。",
+        "en": "The Bass HSR Remembrance Team MMD is complete: 15.33 seconds, 720 × 1280 at 30 fps. Made with PMX / VMD and Blender, with revisions to four-character camera cuts, expressions, lighting and local contact. The separate 13-second 3D-driven AI motion study is also retained. Left and centre cover frames are from MMD; the right frame is from the AI study. Open the project page to play the completed MMD film. Characters, motion and related assets are third-party; scene and script work was agent-assisted."
+      },
+      "link": "mmd-dance.html"
+    },
+    {
+      "title": {
+        "zh": "Who Is Yamal? · AI 足球短片",
+        "en": "Who Is Yamal? · AI Football Short"
+      },
+      "year": "2026",
+      "type": "video",
+      "src": "media/portfolio/short-drama/who-is-yamal-preview.mp4",
+      "poster": "media/portfolio/short-drama/yamal-reveal.jpg",
+      "tools": [
+        "Higgsfield",
+        "Seedance 2.5",
+        "Kling 3.0",
+        "FFmpeg"
+      ],
+      "description": {
+        "zh": "26 秒完整 AI 足球搞笑短片。创意参考 Instagram 足球搞笑 AI 视频博主；我与 Agent 协作将参考转化为镜头与生成要求，筛选人物表演，组合素材、台词、字幕和音效。项目展示模型调用、素材取舍和成片整合能力。虚构情节，非真实采访或比赛记录。",
+        "en": "A complete 26-second AI football comedy short, based on ideas from an Instagram AI football-comedy creator. I work with agents to translate references into shot and generation requirements, select performances, and combine footage, dialogue, captions and sound. It demonstrates model use, footage selection and editing. Fictional scenes, not real interviews or match records."
+      },
+      "link": "short-drama.html"
+    },
+    {
+      "title": {
+        "zh": "Other Areas · AI 足球短片",
+        "en": "Other Areas · AI Football Short"
+      },
+      "year": "2026",
+      "type": "video",
+      "src": "media/portfolio/short-drama/other-areas-preview.mp4",
+      "poster": "media/portfolio/short-drama/other-areas.jpg",
+      "tools": [
+        "Higgsfield",
+        "Seedance 2.5",
+        "Kling 3.0",
+        "FFmpeg"
+      ],
+      "description": {
+        "zh": "64 秒、1080p 完整 AI 足球搞笑短片，以赛后采访、更衣室密谋与突如其来的打断串联情节。创意参考 Instagram 博主；本人负责生成目标、素材筛选、表演与节奏判断，与 Agent 协作完成生成、剪辑、字幕和音效。人物与情节为虚构演绎。",
+        "en": "A complete 64-second, 1080p AI football comedy linking a post-match interview, a dressing-room scheme and an abrupt interruption. The idea references an Instagram creator. I set generation goals, select footage and review performance and timing, working with agents on generation, editing, captions and sound. Characters and events are fictionalised."
+      },
+      "link": "short-drama.html"
+    }
+  ],
+  "window": {
+    "day": "",
+    "dusk": "",
+    "night": ""
+  },
+  "art": [
+    {
+      "src": "media/gallery/snow-lanterns.jpg",
+      "title": {
+        "zh": "雪夜灯火",
+        "en": "Lanterns in the Snow"
+      }
+    },
+    {
+      "src": "media/gallery/sunset-street.jpg",
+      "title": {
+        "zh": "夕阳街景",
+        "en": "Sunset Street"
+      }
+    },
+    {
+      "src": "media/gallery/moonlit-lanterns.jpg",
+      "title": {
+        "zh": "月下灯影",
+        "en": "Moonlit Lanterns"
+      }
+    }
+  ],
+  "monitor": {
+    "nodes": [
+      "CheckpointLoaderSimple",
+      "LoraLoader",
+      "CLIPTextEncode",
+      "KSampler",
+      "VAEDecode",
+      "SaveImage"
+    ]
+  },
+  "studio": {
+    "timezone": "Asia/Shanghai"
+  },
+  "music": {
+    "includeStudioTape": true,
+    "tracks": [
+      {
+        "title": {
+          "en": "Your first track",
+          "zh": "你的第一首曲目"
+        },
+        "artist": "Your Name",
+        "album": {
+          "en": "Album title",
+          "zh": "专辑名"
+        },
+        "year": "2026",
+        "src": "",
+        "cover": "",
+        "notes": {
+          "en": "Put an .mp3 in media/music/, set src, and add a square cover image. Write what the track means to you here.",
+          "zh": "把 .mp3 放进 media/music/，填写 src，再配一张方形封面。这里写这首歌对你的意义。"
+        },
+        "credits": "",
+        "link": ""
+      }
+    ]
+  },
+  "books": [
+    {
+      "title": {
+        "en": "One Hundred Years of Solitude",
+        "zh": "百年孤独"
+      },
+      "author": {
+        "en": "Gabriel García Márquez",
+        "zh": "加西亚·马尔克斯"
+      },
+      "year": 1967,
+      "color": "#8a3b25",
+      "note": {
+        "en": "“Many years later…”\n— Opening · excerpt",
+        "zh": "“多年以后，面对行刑队，奥雷里亚诺·布恩迪亚上校将会回想起父亲带他去见识冰块的那个遥远的下午。”\n—— 范晔译 · 开篇"
+      },
+      "quote": {
+        "en": "",
+        "zh": ""
+      },
+      "link": "https://m.bjnews.com.cn/detail/155150964814404.html"
+    },
+    {
+      "title": {
+        "en": "Twenty Thousand Leagues Under the Sea",
+        "zh": "海底两万里"
+      },
+      "author": {
+        "en": "Jules Verne",
+        "zh": "儒勒·凡尔纳"
+      },
+      "year": 1870,
+      "color": "#1f4d5f",
+      "note": {
+        "en": "“The sea is everything.”\n— Captain Nemo · Part I, Chapter X",
+        "zh": "“海是包罗万象的！海占地球面积的十分之七。”\n—— 曾觉之译 · 第一部第十章"
+      },
+      "quote": {
+        "en": "",
+        "zh": ""
+      },
+      "link": "https://www.mlook.mobi/files/month_1203/f5125cf620d31117a9f5aff9e1e97c4eff6c5f8c.pdf#page=92"
+    },
+    {
+      "title": {
+        "en": "Invisible Cities",
+        "zh": "看不见的城市"
+      },
+      "author": {
+        "en": "Italo Calvino",
+        "zh": "伊塔洛·卡尔维诺"
+      },
+      "year": 1972,
+      "color": "#b8922a",
+      "note": {
+        "en": "“Cities, like dreams, are made of desires and fears…”\n— Part III · excerpt",
+        "zh": "“城市就像梦境，是希望与畏惧建成的……”\n—— 张密译 · 第三章节选"
+      },
+      "quote": {
+        "en": "",
+        "zh": ""
+      },
+      "link": "https://book.douban.com/subject/10555509/blockquotes?sort=page_num"
+    },
+    {
+      "title": {
+        "en": "The Little Prince",
+        "zh": "小王子"
+      },
+      "author": {
+        "en": "Antoine de Saint-Exupéry",
+        "zh": "安托万·德·圣-埃克苏佩里"
+      },
+      "year": 1943,
+      "color": "#2e5c8a",
+      "note": {
+        "en": "“What is essential is invisible to the eye.”\n— Chapter XXI",
+        "zh": "“只有用心才能看得清。实质性的东西，用眼睛是看不见的。”\n—— 马振骋译 · 第二十一章"
+      },
+      "quote": {
+        "en": "",
+        "zh": ""
+      },
+      "link": "https://anyflip.com/dtgvr/jlzm/basic/101-150"
+    },
+    {
+      "title": {
+        "en": "Ways of Seeing",
+        "zh": "观看之道"
+      },
+      "author": {
+        "en": "John Berger",
+        "zh": "约翰·伯格"
+      },
+      "year": 1972,
+      "color": "#a8392c",
+      "note": {
+        "en": "“Seeing comes before words.”\n— Opening",
+        "zh": "“观看先于言语。”\n—— 戴行钺译 · 开篇"
+      },
+      "quote": {
+        "en": "",
+        "zh": ""
+      },
+      "link": "https://book.douban.com/subject/26427579/"
+    },
+    {
+      "title": {
+        "en": "The Old Man and the Sea",
+        "zh": "老人与海"
+      },
+      "author": {
+        "en": "Ernest Hemingway",
+        "zh": "海明威"
+      },
+      "year": 1952,
+      "color": "#3d6b6b",
+      "note": {
+        "en": "“A man can be destroyed but not defeated.”\n— Santiago",
+        "zh": "“一个人可以被毁灭，但不能给打败。”\n—— 吴劳译"
+      },
+      "quote": {
+        "en": "",
+        "zh": ""
+      },
+      "link": "https://www.mj.org.cn/ls/hkxy/jpwz/202204/t20220424_251568.htm"
+    },
+    {
+      "title": {
+        "en": "To Live",
+        "zh": "活着"
+      },
+      "author": {
+        "en": "Yu Hua",
+        "zh": "余华"
+      },
+      "year": 1993,
+      "color": "#5e2b2b",
+      "note": {
+        "en": "“人是为活着本身而活着的，而不是为了活着之外的任何事物所活着。”\n— Chinese original · Author’s preface",
+        "zh": "“人是为活着本身而活着的，而不是为了活着之外的任何事物所活着。”\n—— 余华 · 中文版自序"
+      },
+      "quote": {
+        "en": "",
+        "zh": ""
+      },
+      "link": "https://www.chinesepen.org/blog/archives/44293"
+    },
+    {
+      "title": {
+        "en": "Kafka on the Shore",
+        "zh": "海边的卡夫卡"
+      },
+      "author": {
+        "en": "Haruki Murakami",
+        "zh": "村上春树"
+      },
+      "year": 2002,
+      "color": "#3f4466",
+      "note": {
+        "en": "“Sometimes fate is like a small sandstorm…”\n— The Boy Named Crow · excerpt",
+        "zh": "“某种情况下，命运这东西类似不断改变前进方向的局部沙尘暴。”\n—— 林少华译 · 名叫乌鸦的少年"
+      },
+      "quote": {
+        "en": "",
+        "zh": ""
+      },
+      "link": "https://www.megbook.com.hk/mall/detail.jsp?proID=3972227"
+    }
+  ],
+  "moodboard": [
+    {
+      "src": "media/gallery/lavender-evening.jpg",
+      "caption": {
+        "zh": "薰衣草原野",
+        "en": "Lavender Fields"
+      },
+      "fit": "contain"
+    },
+    {
+      "src": "media/gallery/flowers-and-blue-light.jpg",
+      "caption": {
+        "zh": "花间蓝光",
+        "en": "Blue Light among Flowers"
+      },
+      "fit": "contain"
+    },
+    {
+      "src": "media/gallery/paper-adventure.jpg",
+      "caption": {
+        "zh": "纸上奇遇",
+        "en": "A Paper Adventure"
+      },
+      "fit": "contain"
+    },
+    {
+      "src": "media/gallery/stars-in-the-rain.jpg",
+      "fit": "contain",
+      "caption": {
+        "zh": "雨夜星河",
+        "en": "Stars in the Rain"
+      }
+    },
+    {
+      "src": "media/gallery/spring-landscape.jpg",
+      "caption": {
+        "zh": "春日山水",
+        "en": "Spring Landscape"
+      },
+      "fit": "contain"
+    },
+    {
+      "src": "media/gallery/kimono-portrait.jpg",
+      "caption": {
+        "zh": "和风肖像",
+        "en": "Kimono Portrait"
+      },
+      "fit": "contain"
+    }
+  ],
+  "secrets": {
+    "plant": {
+      "zh": "先做小样，再看结果，记录每一次取舍。——P. ÆVRYX",
+      "en": "Start with a small test. Look at the result. Keep a record of the choices. — P. ÆVRYX"
+    }
+  }
+}
