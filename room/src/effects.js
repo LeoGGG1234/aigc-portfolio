@@ -101,15 +101,6 @@ export class Monitors {
         g.fillStyle = '#b58ce8'; roundRect(g, x + 12, y + 104, (nw - 24) * Math.max(0.02, p), 14, 7); g.fill();
       }
     });
-    // preview node with the current work
-    const src = this.projector.current?.source;
-    const px = W - 210, py = 60;
-    g.fillStyle = '#2d2f37'; roundRect(g, px, py, 190, 150, 10); g.fill();
-    g.fillStyle = '#e8e8ee'; g.font = '600 16px ui-sans-serif, -apple-system, sans-serif';
-    g.fillText('Preview', px + 12, py + 21);
-    if (src) {
-      try { g.drawImage(src, px + 10, py + 32, 170, 106); } catch { /* not ready */ }
-    }
   }
 
   drawAbout({ ctx: g, canvas }, info) {
