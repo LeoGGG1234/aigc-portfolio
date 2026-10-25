@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="P. ÆVRYX 的 3D 个人工作室与 AIGC 作品集。">
+  <meta name="theme-color" content="#14110e">
+  <title>P. ÆVRYX · 3D 个人主页</title>
+  <link rel="canonical" href="https://paevryx.com/room/">
+  <script>
+    const workSections = new Set(["main", "resume", "resume-title", "shorts", "mv", "mv-title", "yamal", "yamal-title", "other-areas", "other-title", "mmd", "film", "comfy", "practice", "materials"]);
+    const destination = new URL(workSections.has(location.hash.slice(1)) ? 'portfolio.html' : 'room/', location.href);
+    destination.search = location.search;
+    destination.hash = location.hash;
+    location.replace(destination.href);
+  </script>
+  <noscript><meta http-equiv="refresh" content="0;url=room/"></noscript>
+<script type="module" src="/preview-notice.js"></script>
+</head>
+<body>
+  <p><a href="room/">进入 3D 个人主页</a></p>
+  <p><a href="portfolio.html">原版作品集</a></p>
+</body>
+</html>
