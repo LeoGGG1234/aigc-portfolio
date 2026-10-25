@@ -1,0 +1,47 @@
+/* sky: the small spark a wish leaves where the shooting star was (decorative, aria-hidden) */
+.sky-wish {
+  position: fixed; width: 30px; height: 30px; margin: -15px 0 0 -15px;
+  pointer-events: none; z-index: 9; opacity: 0;
+  color: #fff6e6;
+  filter: drop-shadow(0 0 6px rgba(255, 232, 196, .75)) drop-shadow(0 0 16px rgba(224, 166, 90, .35));
+}
+.sky-wish svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.sky-wish-star { fill: currentColor; transform-origin: 12px 12px; }
+.sky-wish-dot { fill: currentColor; opacity: 0; }
+
+.sky-wish.go { animation: sky-wish-rise 1.9s var(--ease, cubic-bezier(.2, .7, .2, 1)) forwards; }
+.sky-wish.go .sky-wish-star { animation: sky-wish-turn 1.9s var(--ease, cubic-bezier(.2, .7, .2, 1)) forwards; }
+.sky-wish.go .sky-wish-dot.a { animation: sky-wish-dot 1.3s ease-out .15s forwards; }
+.sky-wish.go .sky-wish-dot.b { animation: sky-wish-dot 1.1s ease-out .35s forwards; }
+
+@keyframes sky-wish-rise {
+  0% { opacity: 0; transform: translateY(6px) scale(.35); }
+  18% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-54px) scale(.55); }
+}
+@keyframes sky-wish-turn {
+  0% { transform: rotate(-20deg); }
+  100% { transform: rotate(35deg); }
+}
+@keyframes sky-wish-dot {
+  0% { opacity: 0; }
+  30% { opacity: .9; }
+  100% { opacity: 0; }
+}
+@keyframes sky-wish-fade {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* reduced motion: the spark only fades in place */
+.sky-wish.still.go, .sky-wish.still.go .sky-wish-star { animation: none; }
+.sky-wish.still.go { animation: sky-wish-fade 1.4s ease forwards; }
+@media (prefers-reduced-motion: reduce) {
+  .sky-wish.go { animation: sky-wish-fade 1.4s ease forwards; }
+  .sky-wish.go .sky-wish-star { animation: none; }
+}
+
+@media (max-width: 720px) {
+  .sky-wish { width: 26px; height: 26px; margin: -13px 0 0 -13px; }
+}
