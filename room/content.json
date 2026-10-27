@@ -29,8 +29,8 @@
     "music": ""
   },
   "about": {
-    "zh": "我是 P. ÆVRYX，有 3 年 AI 工具使用经验，主要进行 AI 视频生成与制作、ComfyUI 工作流搭建与调试，以及 Agent 协作。现有作品包括《Twenty-Four Frames》98 秒 MV 完整剪辑版、两条参考 Instagram 创意制作的足球搞笑短片、《雨停之前》43 秒叙事开场与《The Bass》四角色 MMD。创作中负责方向、视觉参考、分镜、素材筛选与审片，与 Agent 协作调用模型、调试辅助脚本并整理后期与版本记录；另有角色与风格 LoRA 实践及数据整理与治理经历。目前关注上海的 AIGC 与创意技术岗位。",
-    "en": "I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video generation and production, building and debugging ComfyUI workflows, and collaborating with agents. My work includes the 98-second complete edit of Twenty-Four Frames, two football comedy shorts based on ideas from Instagram, the 43-second opening of Before the Rain Stops, and the four-character MMD film The Bass. I define the direction, visual references and shot goals, select footage and review revisions, working with agents on model use, supporting scripts, finishing and version records. I also have character and style LoRA practice and a background in data organisation. I’m interested in AIGC and creative technology roles in Shanghai."
+    "zh": "我是 P. ÆVRYX，有 3 年 AI 工具使用经验，主要进行 AI 视频生成与制作、ComfyUI 工作流搭建与调试，以及 Agent 协作。现有作品包括SOLVANE 索澜《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《雨停之前》43 秒叙事开场与《The Bass》四角色 MMD。创作中负责方向、视觉参考、分镜、素材筛选与审片，与 Agent 协作调用模型、调试辅助脚本并整理后期与版本记录；另有角色与风格 LoRA 实践及数据整理与治理经历。目前关注上海的 AIGC 与创意技术岗位。",
+    "en": "I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video generation and production, building and debugging ComfyUI workflows, and collaborating with agents. My work includes SOLVANE: The Shape of Silence, a 30-second automotive spec film, the 98-second complete edit of Twenty-Four Frames, the 43-second opening of Before the Rain Stops, and the four-character MMD film The Bass. I define the direction, visual references and shot goals, select footage and review revisions, working with agents on model use, supporting scripts, finishing and version records. I also have character and style LoRA practice and a background in data organisation. I’m interested in AIGC and creative technology roles in Shanghai."
   },
   "links": [
     {
@@ -63,6 +63,29 @@
     }
   ],
   "works": [
+    {
+      "title": {
+        "zh": "静的形状 · SOLVANE 品牌概念片",
+        "en": "The Shape of Silence · SOLVANE Spec Film"
+      },
+      "year": "2026",
+      "type": "video",
+      "src": "media/portfolio/solvane/solvane-15s-web.mp4",
+      "poster": "media/portfolio/solvane/solvane-poster.jpg",
+      "tools": [
+        "Google Flow",
+        "Veo 3.1",
+        "Nano Banana Pro",
+        "Lyria 3 Pro",
+        "Python / FFmpeg",
+        "Agent collaboration"
+      ],
+      "description": {
+        "zh": "SOLVANE 索澜虚构汽车品牌的 30 秒概念片，以声音驱动的线条连接城市噪声、静音与贯穿式车灯，表达“让安静被看见”。我与 Agent 协作完成创意、车辆外观设定、镜头生成与筛选、声波图形、剪辑和修正，并输出横竖版等多种规格。此处为 15 秒轻量剪辑预览。",
+        "en": "A 30-second spec film for fictional automotive brand SOLVANE. An audio-driven line connects city noise, silence and the car’s light blade to make silence visible. With agents, I developed the idea and vehicle visuals, generated and selected shots, and worked on waveform graphics, editing and revisions, with landscape and portrait deliverables. This is a lightweight 15-second cutdown preview."
+      },
+      "link": "solvane.html"
+    },
     {
       "title": {
         "zh": "Twenty-Four Frames · 音乐影像",
@@ -167,48 +190,6 @@
         "en": "The Bass HSR Remembrance Team MMD is complete: 15.33 seconds, 720 × 1280 at 30 fps. Made with PMX / VMD and Blender, with revisions to four-character camera cuts, expressions, lighting and local contact. The separate 13-second 3D-driven AI motion study is also retained. Left and centre cover frames are from MMD; the right frame is from the AI study. Open the project page to play the completed MMD film. Characters, motion and related assets are third-party; scene and script work was agent-assisted."
       },
       "link": "mmd-dance.html"
-    },
-    {
-      "title": {
-        "zh": "Who Is Yamal? · AI 足球短片",
-        "en": "Who Is Yamal? · AI Football Short"
-      },
-      "year": "2026",
-      "type": "video",
-      "src": "media/portfolio/short-drama/who-is-yamal-preview.mp4",
-      "poster": "media/portfolio/short-drama/yamal-reveal.jpg",
-      "tools": [
-        "Higgsfield",
-        "Seedance 2.5",
-        "Kling 3.0",
-        "FFmpeg"
-      ],
-      "description": {
-        "zh": "26 秒完整 AI 足球搞笑短片。创意参考 Instagram 足球搞笑 AI 视频博主；我与 Agent 协作将参考转化为镜头与生成要求，筛选人物表演，组合素材、台词、字幕和音效。项目展示模型调用、素材取舍和成片整合能力。虚构情节，非真实采访或比赛记录。",
-        "en": "A complete 26-second AI football comedy short, based on ideas from an Instagram AI football-comedy creator. I work with agents to translate references into shot and generation requirements, select performances, and combine footage, dialogue, captions and sound. It demonstrates model use, footage selection and editing. Fictional scenes, not real interviews or match records."
-      },
-      "link": "short-drama.html"
-    },
-    {
-      "title": {
-        "zh": "Other Areas · AI 足球短片",
-        "en": "Other Areas · AI Football Short"
-      },
-      "year": "2026",
-      "type": "video",
-      "src": "media/portfolio/short-drama/other-areas-preview.mp4",
-      "poster": "media/portfolio/short-drama/other-areas.jpg",
-      "tools": [
-        "Higgsfield",
-        "Seedance 2.5",
-        "Kling 3.0",
-        "FFmpeg"
-      ],
-      "description": {
-        "zh": "64 秒、1080p 完整 AI 足球搞笑短片，以赛后采访、更衣室密谋与突如其来的打断串联情节。创意参考 Instagram 博主；本人负责生成目标、素材筛选、表演与节奏判断，与 Agent 协作完成生成、剪辑、字幕和音效。人物与情节为虚构演绎。",
-        "en": "A complete 64-second, 1080p AI football comedy linking a post-match interview, a dressing-room scheme and an abrupt interruption. The idea references an Instagram creator. I set generation goals, select footage and review performance and timing, working with agents on generation, editing, captions and sound. Characters and events are fictionalised."
-      },
-      "link": "short-drama.html"
     }
   ],
   "window": {

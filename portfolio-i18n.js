@@ -7,7 +7,6 @@ const TEXT = {
   "材料入口": "Materials",
   "AIGC 视频创作": "AI Video Production",
   "与视觉工作流": "& Visual Workflows",
-  "我是 P. ÆVRYX，拥有 3 年 AI 工具使用经验，聚焦 AI 视频生成与制作、ComfyUI 工作流及 LoRA 实践。从创意、剧本分镜到审片与剪辑，结合生成结果持续迭代；现有《Twenty-Four Frames》98 秒 MV 完整剪辑版、两条足球搞笑短片及《The Bass》崩铁 MMD 成片。": "I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video generation and production, ComfyUI workflows and LoRA practice. I develop ideas, scripts and storyboards, then review and edit generated footage through successive revisions. My work includes the 98-second complete edit of Twenty-Four Frames, two football comedy shorts and the Honkai: Star Rail MMD film The Bass.",
   "观看视频预览 ↘": "Watch video previews ↘",
   "查看工作流与材料": "Explore workflows & materials",
   "创作与技术相互连接": "Connecting creative and technical work",
@@ -18,7 +17,6 @@ const TEXT = {
   "流程整理": "Documenting the process",
   "AI 辅助脚本、配置、复核与交接": "AI-assisted scripts, configuration, review and handover",
   "AI 视频生成与制作": "AI Video Generation & Production",
-  "先看 MV 完整剪辑版，再看参考创意制作的足球搞笑短片。围绕具体画面目标调用模型，与 Agent 协作完成素材筛选、剪辑和后期。": "Start with the complete MV edit, then explore the football comedy shorts based on reference ideas. I select and use models for specific visual goals, working with agents on footage selection, editing and post-production.",
   "MV · 20 秒预览": "MV · 20-second preview",
   "预览节选 · v32": "Preview excerpt · v32",
   "浏览器不支持视频播放，请": "Your browser does not support video playback. Please",
@@ -29,20 +27,13 @@ const TEXT = {
   "按镜头保存参考、提示词、生成素材、费用和修改版本；与 Agent 协作修正合成白边及人物颜色漂移，复查镜头衔接与画面表现。": "I keep shot-level references, prompts, generated footage, costs and revision records. With agents, I corrected white compositing fringes and character colour drift, then reviewed shot continuity and the resulting images.",
   "网页播放 720 × 1280 / 30fps 分享版；1080 × 1920 母版保留。49 个剪辑镜头，非 49 条独立生成视频。个人创作，音乐及制作包含 AI / Agent 协作。": "The web version is 720 × 1280 at 30fps; the 1080 × 1920 master is retained. The edit contains 49 shots, not 49 separately generated videos. This is a personal project, with AI / agent collaboration in the music and production.",
   "查看 MV 与制作说明 →": "View the MV & production notes →",
-  "足球题材 AI 搞笑短片": "AI Football Comedy Shorts",
   "20 秒 · 预览片段": "20 seconds · Preview excerpt",
   "打开预览片段": "open the complete short",
   "用采访建立铺垫，让人物从灌木丛中现身，再用赛后反差和文字收尾。将不同生成版本中更完整的台词与更有效的显现镜头组合成一部完整短片。": "An interview sets up the reveal of a character emerging from the bushes, followed by a post-match contrast and a text ending. I combined clearer dialogue and a more effective reveal from different generated versions into one complete short.",
-  "720 × 1280 · 竖屏 · AI 足球戏仿": "720 × 1280 · Vertical · AI football parody",
-  "20 秒 · 预览片段": "20 seconds · Preview excerpt",
-  "把赛后采访、更衣室密谋与管理层破门串成一段足球戏仿。人物关门后从愤怒转为坏笑，与队友的庆祝形成反差，再用突如其来的打断完成反转。": "A post-match interview, a dressing-room plot and an interruption by management form a football parody. Behind the closed door, anger turns into a sly smile; the team’s celebration is cut short by an unexpected entrance.",
-  "1080 × 1920 · 竖屏 · AI 足球戏仿": "1080 × 1920 · Vertical · AI football parody",
   "参考创意与制作要求": "Reference Ideas & Production Direction",
-  "两条短片的创意参考 Instagram 足球搞笑 AI 视频博主。我负责把参考内容转化为镜头、视觉与表演要求，筛选生成素材，判断人物表现及剪辑节奏。": "The ideas for both shorts were inspired by an Instagram creator making AI football comedy. I translated the references into shot, visual and performance requirements, selected generated footage, and judged character performances and editing rhythm.",
   "生成、筛选与后期": "Generation, Selection & Post-production",
   "与 Agent 协作完成剧本整理、Higgsfield / Seedance 2.5 生成执行及 FFmpeg 后期，组合素材、字幕、片尾和音效，保留剧本、生成版本与成片。": "I worked with agents to organise scripts, run generation with Higgsfield / Seedance 2.5, and finish the films with FFmpeg. This included assembling footage, subtitles, end cards and sound effects, while retaining scripts, generated versions and final edits.",
   "查看创作与材料说明 →": "View creative & material notes →",
-  "AI 戏仿创作，虚构情节与人物表现为 AI 演绎，非真实采访或比赛记录。人物、球队及品牌来自第三方；创意参考 Instagram 足球搞笑 AI 视频；风格研究参考 @junioraivideos。": "AI-generated parody: the fictional events and performances are not real interviews or match footage. People, teams and brands belong to third parties. Concept references: Instagram AI football comedy videos. Visual-style reference: @junioraivideos.",
   "《The Bass》· 崩铁记忆队": "The Bass · HSR Remembrance Team",
   "以遐蝶、风堇、昔涟和长夜月为角色，通过俯视与正面镜头切换组织表演，完成四角色竖屏 MMD 舞蹈。": "A four-character vertical MMD dance featuring Castorice, Hyacine, Cyrene and Evernight, with overhead and frontal shots creating changes in presentation.",
   "完整成片 · 15.33 秒": "Complete film · 15.33 seconds",
@@ -129,7 +120,6 @@ const TEXT = {
   "读说明": "Read notes",
   "20 秒预览、创作与贡献说明": "20-second preview; creative and contribution notes",
   "观看短片": "Watch film",
-  "20 秒预览、创作与贡献说明": "20-second preview; creative and contribution notes",
   "15.33 秒完整 MMD 成片、制作与素材署名": "15.33-second complete MMD film; production notes and credits",
   "观看成片": "Watch film",
   "20 秒开场预览、电视修改对照、流程验证说明": "20-second opening preview; TV-screen comparisons and workflow-verification notes",
@@ -144,20 +134,44 @@ const TEXT = {
   "邮件联系 P. ÆVRYX ↗": "Email P. ÆVRYX ↗",
   "P. ÆVRYX · AIGC 视觉与工作流": "P. ÆVRYX · AI Visuals & Workflows",
   "材料整理：2026.10 ·": "Materials compiled: Oct 2026 ·",
-  "来源与展示范围": "Sources & Display Scope"
+  "来源与展示范围": "Sources & Display Scope",
+  "SOLVANE 索澜《静的形状》": "SOLVANE · The Shape of Silence",
+  "汽车品牌概念片 · 虚构品牌": "Automotive brand concept film · Fictional brand",
+  "让安静被看见：声波线随城市噪声跳动，勾勒天际线，在静音中归于平直，最终化为贯穿式车灯。": "Making silence visible: a line moves with city noise, traces the skyline, settles into silence and becomes the car’s light blade.",
+  "15 秒剪辑预览 · 原片 30 秒": "15-second cutdown preview · 30-second original",
+  "导演 / AI 视频制作（与 Agent 协作） · 2026.10": "Direction / AI video production with agents · October 2026",
+  "围绕“让安静被看见”构思 30 秒品牌片，以音轨驱动的声波线串联城市噪声、陆家嘴天际线、静音与贯穿式车灯，完成“安静，有了形状”的视觉表达及中英双语文案。": "A 30-second concept film built around making silence visible. An audio-driven line connects city noise, the Lujiazui skyline, silence and the car’s light blade, supported by bilingual copy: “Silence, given shape.”",
+  "与 Agent 协作设定双色猎装车造型，使用 Nano Banana Pro、Google Flow / Veo 3.1 制作参考图与镜头素材，检查车辆外观、地标及画面瑕疵；车门镜头两次失败后，改用车外视角与首尾帧方案。": "With agents, I developed a two-tone shooting-brake concept and used Nano Banana Pro and Google Flow / Veo 3.1 for reference images and shots. Reviews covered vehicle appearance, landmarks and artifacts. After two failed interior door takes, we switched to an exterior shot with first- and last-frame guidance.",
+  "与 Agent 协作使用 Python、FFmpeg 完成声波图形、画面合成及声音剪辑；根据审片结果调整音乐收尾、去除车内人物，并重剪 15 秒版以突出产品。": "Working with agents in Python and FFmpeg, I developed the waveform graphics, compositing and sound edit. Review-led revisions adjusted the musical ending, removed an occupant from a car window and recut the 15-second version to give the product more screen time.",
+  "输出 30 秒主片及无字版、15 秒横竖版、6 秒短版、4K 主视觉，以及不同响度目标的混音与音乐、音效、环境声分轨。": "Deliverables include a 30-second master and text-free version, 15-second landscape and portrait cuts, a 6-second bumper, 4K key visuals, mixes for different loudness targets, and separate music, effects and ambience stems.",
+  "个人概念广告，品牌与车型为虚构设定，未实际投放。此处展示现有 15 秒剪辑版的轻量预览；30 秒完整版及更详细的制作材料可按需提供。": "A personal spec ad for a fictional brand and vehicle concept, with no live campaign. This page shows a lightweight preview of the existing 15-second cutdown. The full 30-second film and further production materials are available on request.",
+  "创意与表达": "Concept and expression",
+  "画面生成与镜头修正": "Generation and shot revisions",
+  "声音、合成与 Agent 协作": "Sound, compositing and agent collaboration",
+  "多版本制作与交付": "Versions and deliverables",
+  "观看广告与制作说明 →": "Watch the ad and explore the process →",
+  "查看广告项目与材料说明 →": "Read the ad project and material notes →",
+  "点击播放，可拖动进度条、调整音量或全屏观看。": "Press play. Use the timeline to seek, adjust the volume or enter full screen.",
+  "← 返回 3D 工作室": "← Back to the 3D studio",
+  "前往文字作品页 →": "Open the text portfolio →",
+  "主视觉": "Key visual",
+  "《静的形状》15 秒广告预览": "The Shape of Silence, 15-second ad preview",
+  "我是 P. ÆVRYX，拥有 3 年 AI 工具使用经验，聚焦 AI 视频生成与制作、ComfyUI 工作流及 LoRA 实践。从创意、剧本分镜到审片与剪辑，结合生成结果持续迭代；现有 SOLVANE《静的形状》汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版及《The Bass》崩铁 MMD 成片。": "I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video production, ComfyUI workflows and LoRA practice. I develop ideas and storyboards, review generated footage and refine the edit. Selected work includes the SOLVANE automotive spec film The Shape of Silence, the 98-second complete edit of Twenty-Four Frames and the HSR MMD film The Bass.",
+  "从汽车品牌概念片到音乐影像，围绕具体画面目标调用模型，与 Agent 协作完成镜头生成、素材筛选、剪辑和后期。": "From an automotive spec film to a music video, I select models for specific visual goals and work with agents on shot generation, footage selection, editing and finishing.",
+  "观看广告": "Watch the ad",
+  "01 · SOLVANE《静的形状》品牌概念片": "01 · SOLVANE: The Shape of Silence — Spec Film",
+  "本网站展示既有作品与工作流材料，网站整理没有新增训练、生成或付费媒体调用。较长作品采用轻量预览，标注时长指原作。材料涵盖 SOLVANE《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《The Bass》MMD、《雨停之前》的开场与局部对照，以及 ComfyUI、LoRA 和流程调试说明。": "This site presents existing work and workflow materials; assembling the site involved no new training, generation or paid media calls. Longer works use lightweight previews, with original durations stated separately. Materials cover the 30-second SOLVANE automotive spec film The Shape of Silence, the 98-second complete edit of Twenty-Four Frames, The Bass MMD film, the opening and local comparisons for Before the Rain Stops, and ComfyUI, LoRA and workflow-debugging notes."
 };
 const ATTR = {
   "主导航": "Main navigation",
   "Twenty-Four Frames，98秒MV完整剪辑版": "Twenty-Four Frames, 98-second complete MV edit",
-  "Who Is Yamal?，26秒完整AI戏仿短片": "Who Is Yamal?, 26-second complete AI parody short",
-  "Other Areas，64秒1080p完整AI戏仿短片": "Other Areas, 64-second complete AI parody short in 1080p",
   "The Bass，15.33秒崩铁记忆队完整MMD成片": "The Bass, 15.33-second complete HSR Remembrance Team MMD film",
   "雨停之前，43秒现有开场片段": "Before the Rain Stops, current 43-second opening",
   "电视画面替换前后关键帧对照，左侧原片，右侧输出": "TV-screen replacement comparison: original on the left, output on the right",
   "电视边缘羽化1.7和2.8像素对照": "TV-screen edge feathering at 1.7 and 2.8 pixels"
 };
 
-import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261022-language-fix-v1';
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261027-solvane-v1';
 
 // Translate text nodes in place: video elements, playback state and anchors stay intact.
 const textEntries = [];
@@ -189,7 +203,7 @@ function render(next, persist = false) {
   for (const entry of attrEntries) entry.element.setAttribute(entry.name, entry[lang]);
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   document.title = lang === 'zh' ? chineseTitle : 'P. ÆVRYX · AI Video Production & Visual Workflows';
-  meta.content = lang === 'zh' ? chineseDescription : 'AI video production and visual workflows by P. ÆVRYX: Twenty-Four Frames, football comedy shorts, The Bass MMD film, Before the Rain Stops, ComfyUI and LoRA practice, and AI-assisted production records.';
+  meta.content = lang === 'zh' ? chineseDescription : 'AI video production and visual workflows by P. ÆVRYX: SOLVANE: The Shape of Silence, Twenty-Four Frames, The Bass MMD film, Before the Rain Stops, ComfyUI and LoRA practice, and AI-assisted production records.';
   button.textContent = lang === 'zh' ? 'EN' : '中';
   button.lang = lang === 'zh' ? 'en' : 'zh-CN';
   button.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换为中文');

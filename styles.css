@@ -27,3 +27,6 @@
 .resume-section{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
 .resume-section h2{font-size:20px;font-weight:550;margin:0 0 5px}.resume-section p{font-size:13px;color:var(--muted);margin:0}.resume-section .actions{margin:0;flex-shrink:0}
 @media(max-width:700px){.resume-section{display:block}.resume-section .actions{margin-top:17px}}
+
+/* Landscape ad preview keeps its full frame on desktop and mobile. */
+.ad-case{grid-template-columns:1fr;gap:24px;margin-bottom:42px}.ad-case .short-player video{height:auto;aspect-ratio:16/9;max-height:none}.ad-case .mmd-notes{max-width:850px}

@@ -9,7 +9,8 @@ function update(){
   let note=videos.get(video);if(!note){note=document.createElement('p');note.className='preview-video-note';(video.parentElement.matches('.screen,.short-player,.video-frame')?video.parentElement:video).insertAdjacentElement('afterend',note);videos.set(video,note);video.addEventListener('loadedmetadata',update)}
   const duration=Number.isFinite(video.duration)?video.duration:null;
   const short=duration!==null&&duration<19;
-  const label=zh?(short?'短片原时长 · 轻量播放版':'不超过 20 秒预览 · 完整作品可按需提供'):(short?'Original short duration · Lightweight version':'Preview up to 20 seconds · Full work available on request');
+  const isAd=(video.currentSrc||video.getAttribute('src')||video.querySelector('source')?.src||'').includes('/solvane/');
+  const label=isAd?(zh?'15 秒剪辑预览 · 30 秒完整版可按需提供':'15-second cutdown preview · Full 30-second film available on request'):zh?(short?'短片原时长 · 轻量播放版':'不超过 20 秒预览 · 完整作品可按需提供'):(short?'Original short duration · Lightweight version':'Preview up to 20 seconds · Full work available on request');
   if(note.textContent!==label)note.textContent=label;
   video.setAttribute('aria-label',label);
  });

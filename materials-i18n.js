@@ -9,12 +9,7 @@ const TEXT = {
   "保留参考、提示词、费用和修改版本。此处为个人创作与现有制作记录，不包含商业投放或传播效果数据。": "References, prompts, costs and revision versions are retained. These are records of a personal project and its production; they do not include commercial campaign or audience-performance data.",
   "播放 MV 与阅读说明 →": "Play the MV & read the notes →",
   "01 · AI 短剧创作": "01 · AI Short-film Production",
-  "《Who Is Yamal?》为 26.125 秒完整短片，720 × 1280；《Other Areas》为 64.053 秒完整短片，1080 × 1920。首页展示两部短片的前 20 秒预览，均可手动播放。": "Who Is Yamal? is a complete 26.125-second short at 720 × 1280. Other Areas is a complete 64.053-second short at 1080 × 1920. The portfolio page provides the first 20 seconds of each short for manual playback.",
   "从参考到镜头": "From References to Shots",
-  "《Who Is Yamal?》以采访、人物显现和赛后反差组织笑点，将不同版本的台词与显现镜头组合。《Other Areas》围绕采访、更衣室密谋和破门打断设计反转，用关门后的表情变化、队友庆祝及剪辑停顿衔接叙事。": "Who Is Yamal? builds its joke around an interview, a character reveal and a post-match contrast, combining dialogue and reveal shots from different versions. Other Areas connects an interview, a dressing-room plot and an interruption at the door, using a change of expression after the door closes, the team’s celebration and editing pauses to develop the reversal.",
-  "创意参考 Instagram 足球搞笑 AI 视频博主，本人负责生成目标、人物表演要求、视觉参考、审片与版本选择；与 Agent 协作整理剧本、调用 Higgsfield / Seedance 2.5 生成镜头，以及完成字幕、片尾、音效与 FFmpeg 剪辑。保留剧本、镜头要求、生成版本和成片，便于核对迭代过程。": "The ideas were inspired by an Instagram creator making AI football comedy. I defined generation goals, character-performance requirements and visual references, reviewed footage and selected versions. With agents, I organised scripts, generated shots through Higgsfield / Seedance 2.5, and completed subtitles, end cards, sound effects and FFmpeg editing. Scripts, shot requirements, generated versions and final edits are retained for reviewing the iteration process.",
-  "两部均为 AI 足球戏仿，人物表现和情节为虚构演绎，非真实采访或比赛记录。人物、球队及品牌来自第三方；创意参考 Instagram 足球搞笑 AI 视频；风格研究参考 @junioraivideos。本页展示的是本人和 Agent 协作完成的生成与剪辑结果。": "Both films are AI football parodies: the performances and events are fictional, not real interviews or match footage. People, teams and brands belong to third parties. Concept references: Instagram AI football comedy videos. Visual-style reference: @junioraivideos. This page presents the generation and editing results produced through my collaboration with agents.",
-  "返回两部完整短片 →": "Back to both complete shorts →",
   "02 · 《The Bass》崩铁记忆队 MMD": "02 · The Bass — HSR Remembrance Team MMD",
   "已完成的四角色 MMD 舞蹈，15.333 秒、720 × 1280、30fps，H.264 / AAC。首页展示完整成片，可手动播放。": "A completed four-character MMD dance: 15.333 seconds, 720 × 1280, 30fps, H.264 / AAC. The complete delivery video is available on the portfolio page and can be played manually.",
   "制作与个人贡献": "Production & My Contribution",
@@ -72,7 +67,6 @@ const TEXT = {
   "音乐记录为私用，动作资料不允许再分发，AI 使用许可未明确。故公开入口仅展示流程与贡献说明；视频及逐秒检查图可在约定的私下审阅范围内提供，不上传原角色、动作与音乐文件。": "The music is recorded as private-use material, the motion assets do not allow redistribution, and permission for AI use is unclear. The public page therefore shows workflow and contribution notes only. The video and second-by-second inspection images may be shared for private review within an agreed scope; source character, motion and music files are not uploaded.",
   "联系索取私下审阅材料 →": "Request private review materials →",
   "来源与展示范围": "Sources & Display Scope",
-  "本网站整理既有作品与工作流材料，没有新增训练、生成或付费媒体调用。本站长视频仅播放约 20 秒预览，以下时长描述原作。材料涵盖《Twenty-Four Frames》98 秒 MV 完整剪辑版、《Who Is Yamal?》《Other Areas》两部完整短片、《The Bass》崩铁 MMD 完整成片、项目介绍、《雨停之前》的现有开场及局部对照、ComfyUI 配置示例和整理后的模型调用、流程搭建与调试说明。": "This website organises existing work and workflow materials. Assembling it did not involve new training, generation or paid media calls. Longer videos on this site are roughly 20-second previews; durations below describe the original projects. Materials cover the 98-second complete edit of Twenty-Four Frames; the complete shorts Who Is Yamal? and Other Areas; the complete HSR MMD film The Bass; project introductions; the existing opening and local comparisons for Before the Rain Stops; ComfyUI configuration examples; and notes on model use, workflow building and debugging.",
   "《雨停之前》的原始视频来自创作者通过 Higgsfield 生成并提供的素材，使用项目中已有的 AI 参考图；没有额外插入第三方电影片段或购买音乐。部分早期参考图的精确生成工具版本未完整留存，作品使用仍受原服务条款约束。": "The source videos for Before the Rain Stops were generated through Higgsfield and provided by the creator, using AI reference images already in the project. No additional third-party film clips or purchased music were inserted. Exact generation-tool versions for some early reference images were not fully retained; use of the work remains subject to the original services’ terms.",
   "LoRA 训练与 13 秒 AI 动作实验涉及第三方图源、模型、动作或音乐，完整过程材料保留在私下审阅包中。《The Bass》MMD 成片按上述署名展示，未上传原模型、动作文件或着色预设。公开说明不代表对第三方内容拥有独占版权或无条件商业许可。": "LoRA training and the 13-second AI-motion experiment involve third-party images, models, motion or music; full process materials are retained in private review packages. The Bass MMD film is shown with the credits above, without source models, motion files or shader presets. Public descriptions do not imply exclusive copyright in third-party content or unrestricted commercial permission.",
   "更详细的脚本、配置、日志及历史清单可按需审阅。离线精选包为阅读材料，未包含完整运行环境，不作为开箱即用或跨机器复现承诺。": "More detailed scripts, configurations, logs and historical inventories can be reviewed on request. The offline selection is reading material without a complete runtime environment; it is not a promise of out-of-the-box operation or reproducibility across machines.",
@@ -81,10 +75,36 @@ const TEXT = {
   "返回作品入口": "Back to portfolio",
   "3D 主页 ↗": "3D studio ↗",
   "跳到主要内容": "Skip to main content",
-  "。": "."
+  "。": ".",
+  "SOLVANE 索澜《静的形状》": "SOLVANE · The Shape of Silence",
+  "汽车品牌概念片 · 虚构品牌": "Automotive brand concept film · Fictional brand",
+  "让安静被看见：声波线随城市噪声跳动，勾勒天际线，在静音中归于平直，最终化为贯穿式车灯。": "Making silence visible: a line moves with city noise, traces the skyline, settles into silence and becomes the car’s light blade.",
+  "15 秒剪辑预览 · 原片 30 秒": "15-second cutdown preview · 30-second original",
+  "导演 / AI 视频制作（与 Agent 协作） · 2026.10": "Direction / AI video production with agents · October 2026",
+  "围绕“让安静被看见”构思 30 秒品牌片，以音轨驱动的声波线串联城市噪声、陆家嘴天际线、静音与贯穿式车灯，完成“安静，有了形状”的视觉表达及中英双语文案。": "A 30-second concept film built around making silence visible. An audio-driven line connects city noise, the Lujiazui skyline, silence and the car’s light blade, supported by bilingual copy: “Silence, given shape.”",
+  "与 Agent 协作设定双色猎装车造型，使用 Nano Banana Pro、Google Flow / Veo 3.1 制作参考图与镜头素材，检查车辆外观、地标及画面瑕疵；车门镜头两次失败后，改用车外视角与首尾帧方案。": "With agents, I developed a two-tone shooting-brake concept and used Nano Banana Pro and Google Flow / Veo 3.1 for reference images and shots. Reviews covered vehicle appearance, landmarks and artifacts. After two failed interior door takes, we switched to an exterior shot with first- and last-frame guidance.",
+  "与 Agent 协作使用 Python、FFmpeg 完成声波图形、画面合成及声音剪辑；根据审片结果调整音乐收尾、去除车内人物，并重剪 15 秒版以突出产品。": "Working with agents in Python and FFmpeg, I developed the waveform graphics, compositing and sound edit. Review-led revisions adjusted the musical ending, removed an occupant from a car window and recut the 15-second version to give the product more screen time.",
+  "输出 30 秒主片及无字版、15 秒横竖版、6 秒短版、4K 主视觉，以及不同响度目标的混音与音乐、音效、环境声分轨。": "Deliverables include a 30-second master and text-free version, 15-second landscape and portrait cuts, a 6-second bumper, 4K key visuals, mixes for different loudness targets, and separate music, effects and ambience stems.",
+  "个人概念广告，品牌与车型为虚构设定，未实际投放。此处展示现有 15 秒剪辑版的轻量预览；30 秒完整版及更详细的制作材料可按需提供。": "A personal spec ad for a fictional brand and vehicle concept, with no live campaign. This page shows a lightweight preview of the existing 15-second cutdown. The full 30-second film and further production materials are available on request.",
+  "创意与表达": "Concept and expression",
+  "画面生成与镜头修正": "Generation and shot revisions",
+  "声音、合成与 Agent 协作": "Sound, compositing and agent collaboration",
+  "多版本制作与交付": "Versions and deliverables",
+  "观看广告与制作说明 →": "Watch the ad and explore the process →",
+  "查看广告项目与材料说明 →": "Read the ad project and material notes →",
+  "点击播放，可拖动进度条、调整音量或全屏观看。": "Press play. Use the timeline to seek, adjust the volume or enter full screen.",
+  "← 返回 3D 工作室": "← Back to the 3D studio",
+  "前往文字作品页 →": "Open the text portfolio →",
+  "主视觉": "Key visual",
+  "《静的形状》15 秒广告预览": "The Shape of Silence, 15-second ad preview",
+  "我是 P. ÆVRYX，拥有 3 年 AI 工具使用经验，聚焦 AI 视频生成与制作、ComfyUI 工作流及 LoRA 实践。从创意、剧本分镜到审片与剪辑，结合生成结果持续迭代；现有 SOLVANE《静的形状》汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版及《The Bass》崩铁 MMD 成片。": "I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video production, ComfyUI workflows and LoRA practice. I develop ideas and storyboards, review generated footage and refine the edit. Selected work includes the SOLVANE automotive spec film The Shape of Silence, the 98-second complete edit of Twenty-Four Frames and the HSR MMD film The Bass.",
+  "从汽车品牌概念片到音乐影像，围绕具体画面目标调用模型，与 Agent 协作完成镜头生成、素材筛选、剪辑和后期。": "From an automotive spec film to a music video, I select models for specific visual goals and work with agents on shot generation, footage selection, editing and finishing.",
+  "观看广告": "Watch the ad",
+  "01 · SOLVANE《静的形状》品牌概念片": "01 · SOLVANE: The Shape of Silence — Spec Film",
+  "本网站展示既有作品与工作流材料，网站整理没有新增训练、生成或付费媒体调用。较长作品采用轻量预览，标注时长指原作。材料涵盖 SOLVANE《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《The Bass》MMD、《雨停之前》的开场与局部对照，以及 ComfyUI、LoRA 和流程调试说明。": "This site presents existing work and workflow materials; assembling the site involved no new training, generation or paid media calls. Longer works use lightweight previews, with original durations stated separately. Materials cover the 30-second SOLVANE automotive spec film The Shape of Silence, the 98-second complete edit of Twenty-Four Frames, The Bass MMD film, the opening and local comparisons for Before the Rain Stops, and ComfyUI, LoRA and workflow-debugging notes."
 };
 
-import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261022-language-fix-v1';
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261027-solvane-v1';
 
 // Keep existing anchors, download elements and inline code intact.
 const entries = [];
