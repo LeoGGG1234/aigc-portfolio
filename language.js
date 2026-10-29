@@ -1,7 +1,7 @@
 // Shared preference for every portfolio page. Initial URL choice never broadcasts.
 const EVENT_KEY = 'portfolio:language-change';
 const siteRoot = new URL('./', import.meta.url).pathname;
-const pages = new Set(['', 'index.html', 'portfolio.html', 'materials.html', 'room/', 'room/index.html', 'room/text.html', 'room/mv.html', 'room/solvane.html', 'room/short-drama.html', 'room/mmd-dance.html']);
+const pages = new Set(['', 'index.html', 'portfolio.html', 'materials.html', 'room/', 'room/index.html', 'room/text.html', 'room/mv.html', 'room/solvane.html', 'room/short-drama.html', 'room/mmd-dance.html', 'room/one-lap.html']);
 
 export function normaliseLanguage(value) {
   if (value === 'zh' || value === 'en') return value;

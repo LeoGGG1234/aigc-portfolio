@@ -1,5 +1,32 @@
 // Existing portfolio copy translated without rebuilding the document.
-const TEXT = {
+const TEXT = {"《一圈》One Lap":"One Lap",
+"本地开源模型音乐短片":"Music film made with local open-weight models",
+"项目静帧 · 暂不提供视频播放":"Project still · Video not currently available",
+"2 分钟版 / 63 秒精剪版":"2-minute version / 63-second edit",
+"一个女孩从黎明跑到下一个黎明，穿过一座城市。以光线、运动和音乐组织短片。":"A girl runs through a city from one dawn to the next. Light, movement and music shape the film.",
+"全部画面在本地生成":"All visuals generated locally",
+"全部图像及视频素材使用本地部署的开源模型生成，通过 ComfyUI 完成制作，未调用付费视频生成服务。配乐使用 Suno，另行制作与剪辑。":"All image and video assets were generated with locally deployed open-weight models through ComfyUI, without paid video-generation services. Music was created with Suno and edited separately.",
+"画面取舍":"Selecting the images",
+"负责概念、视觉设计、分镜与全部创作决策。根据构图、光线、动作表现和角色一致性筛选素材，决定镜头保留、重做或调整方案；在画质与速度之间优先保留画面表现，放弃效果不理想的加速方案。":"I directed the concept, visual design, storyboards and all creative decisions. I selected footage for composition, lighting, movement and character consistency, deciding which shots to keep, regenerate or redesign. Image quality took priority over speed; acceleration variants with weaker results were rejected.",
+"模型与 Agent 协作":"Models and agent collaboration",
+"在本地 GPU 工作站上，与 Agent 协作搭建、运行和调试 ComfyUI 生产管线。起始画面使用 Krea 2，动态使用 MiniMax H3；根据测试镜头的表现调整模型与处理流程。":"With agents, I built, ran and debugged a ComfyUI production pipeline on a local GPU workstation. Krea 2 supplied starting images and MiniMax H3 generated motion. Model and processing choices followed tests on demanding shots.",
+"剪辑与复查":"Editing and review",
+"设计画面内转场，依据音乐段落与脚步落点安排剪辑；检查动作流畅度、角色服装、光照方向与转场连续性，根据审片结果修改。":"I designed transitions within the image and edited around musical sections and footfalls. Reviews covered movement, clothing, light direction and continuity across transitions, with revisions guided by the results.",
+"当前仅展示项目静帧与制作说明，不提供视频播放或下载。":"This page currently shows a project still and production notes, without video playback or downloads.",
+"查看静帧与制作说明 →":"View the still and production notes →",
+"查看本地制作与画面取舍说明 →":"Read about local production and shot selection →",
+"项目静帧、本地生成与画面取舍说明":"Project still, local generation and shot-selection notes",
+"查看项目":"View project",
+"读说明":"Read notes",
+"02 · 《一圈》本地开源模型音乐短片":"02 · One Lap — a locally generated music film",
+"本页展示《一圈》的项目静帧。短片包含 2 分钟版与 63 秒精剪版，目前不在网站提供视频播放。":"This page presents a still from One Lap. The project includes a two-minute version and a 63-second edit; video is not currently available on this site.",
+"《一圈》项目静帧：夕阳下跑向城市的女孩":"One Lap project still: a girl running towards the city at sunset",
+"返回工作室":"Back to the studio",
+"返回作品入口":"Back to the portfolio",
+"制作方式与创作决策":"Production method and creative decisions",
+"我是 P. ÆVRYX，拥有 3 年 AI 工具使用经验，聚焦 AI 视频生成与制作、ComfyUI 工作流及 LoRA 实践。从创意、剧本分镜到审片与剪辑，结合生成结果持续迭代；现有 SOLVANE《静的形状》汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版，以及本地开源模型音乐短片《一圈》。":"I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video production, ComfyUI workflows and LoRA practice. I develop concepts and storyboards, review generated footage and refine the edit. Selected work includes the SOLVANE automotive spec film The Shape of Silence, Twenty-Four Frames and One Lap, a music film made with local open-weight models.",
+"本网站展示既有作品与工作流材料，网站整理没有新增训练、生成或付费媒体调用。较长作品采用轻量预览，标注时长指原作。材料涵盖 SOLVANE《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《一圈》本地开源模型音乐短片、《雨停之前》的开场与局部对照，以及 ComfyUI、LoRA 和流程调试说明。":"This site presents existing work and production records: the SOLVANE automotive spec film, Twenty-Four Frames, the locally generated music film One Lap, Before the Rain Stops, and ComfyUI, LoRA and workflow notes. Longer videos use lightweight previews. One Lap currently has a still and notes only.",
+
   "跳到主要内容": "Skip to main content",
   "3D 主页 ↗": "3D studio ↗",
   "视频作品": "Videos",
@@ -160,9 +187,9 @@ const TEXT = {
   "从汽车品牌概念片到音乐影像，围绕具体画面目标调用模型，与 Agent 协作完成镜头生成、素材筛选、剪辑和后期。": "From an automotive spec film to a music video, I select models for specific visual goals and work with agents on shot generation, footage selection, editing and finishing.",
   "观看广告": "Watch the ad",
   "01 · SOLVANE《静的形状》品牌概念片": "01 · SOLVANE: The Shape of Silence — Spec Film",
-  "本网站展示既有作品与工作流材料，网站整理没有新增训练、生成或付费媒体调用。较长作品采用轻量预览，标注时长指原作。材料涵盖 SOLVANE《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《The Bass》MMD、《雨停之前》的开场与局部对照，以及 ComfyUI、LoRA 和流程调试说明。": "This site presents existing work and workflow materials; assembling the site involved no new training, generation or paid media calls. Longer works use lightweight previews, with original durations stated separately. Materials cover the 30-second SOLVANE automotive spec film The Shape of Silence, the 98-second complete edit of Twenty-Four Frames, The Bass MMD film, the opening and local comparisons for Before the Rain Stops, and ComfyUI, LoRA and workflow-debugging notes."
+  "本网站展示既有作品与工作流材料，网站整理没有新增训练、生成或付费媒体调用。较长作品采用轻量预览，标注时长指原作。材料涵盖 SOLVANE《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《The Bass》MMD、《雨停之前》的开场与局部对照，以及 ComfyUI、LoRA 和流程调试说明。": "This site presents existing work and workflow materials; assembling the site involved no new training, generation or paid media calls. Longer works use lightweight previews, with original durations stated separately. Materials cover the 30-second SOLVANE automotive spec film The Shape of Silence, the 98-second complete edit of Twenty-Four Frames, One Lap local-model music film, the opening and local comparisons for Before the Rain Stops, and ComfyUI, LoRA and workflow-debugging notes."
 };
-const ATTR = {
+const ATTR = {"《一圈》项目静帧：夕阳下跑向城市的女孩":"One Lap project still: a girl running towards the city at sunset",
   "主导航": "Main navigation",
   "Twenty-Four Frames，98秒MV完整剪辑版": "Twenty-Four Frames, 98-second complete MV edit",
   "The Bass，15.33秒崩铁记忆队完整MMD成片": "The Bass, 15.33-second complete HSR Remembrance Team MMD film",
@@ -171,7 +198,7 @@ const ATTR = {
   "电视边缘羽化1.7和2.8像素对照": "TV-screen edge feathering at 1.7 and 2.8 pixels"
 };
 
-import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261027-solvane-v1';
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261029-one-lap-v1';
 
 // Translate text nodes in place: video elements, playback state and anchors stay intact.
 const textEntries = [];
@@ -203,7 +230,7 @@ function render(next, persist = false) {
   for (const entry of attrEntries) entry.element.setAttribute(entry.name, entry[lang]);
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   document.title = lang === 'zh' ? chineseTitle : 'P. ÆVRYX · AI Video Production & Visual Workflows';
-  meta.content = lang === 'zh' ? chineseDescription : 'AI video production and visual workflows by P. ÆVRYX: SOLVANE: The Shape of Silence, Twenty-Four Frames, The Bass MMD film, Before the Rain Stops, ComfyUI and LoRA practice, and AI-assisted production records.';
+  meta.content = lang === 'zh' ? chineseDescription : 'AI video production and visual workflows by P. ÆVRYX: SOLVANE: The Shape of Silence, Twenty-Four Frames, One Lap local-model music film, Before the Rain Stops, ComfyUI and LoRA practice, and AI-assisted production records.';
   button.textContent = lang === 'zh' ? 'EN' : '中';
   button.lang = lang === 'zh' ? 'en' : 'zh-CN';
   button.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换为中文');
