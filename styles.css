@@ -30,3 +30,6 @@
 
 /* Landscape ad preview keeps its full frame on desktop and mobile. */
 .ad-case{grid-template-columns:1fr;gap:24px;margin-bottom:42px}.ad-case .short-player video{height:auto;aspect-ratio:16/9;max-height:none}.ad-case .mmd-notes{max-width:850px}
+
+/* One Lap is a landscape film; preserve its native proportions. */
+#one-lap .mmd-case{grid-template-columns:1fr;gap:24px}#one-lap .short-player video{height:auto;aspect-ratio:320/183;max-height:none}#one-lap .mmd-notes{max-width:850px}

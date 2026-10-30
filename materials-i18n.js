@@ -1,7 +1,7 @@
 // English translation of the existing detailed material notes.
 const TEXT = {"01 · 《一圈》本地开源模型音乐短片":"01 · One Lap — a locally generated music film","02 · MV · Twenty-Four Frames":"02 · MV · Twenty-Four Frames","03 · SOLVANE《静的形状》品牌概念片":"03 · SOLVANE: The Shape of Silence — Spec Film","《一圈》One Lap":"One Lap",
 "本地开源模型音乐短片":"Music film made with local open-weight models",
-"项目静帧 · 暂不提供视频播放":"Project still · Video not currently available",
+"63 秒预览版 · 完整版约 2 分钟":"63-second preview · Full film approx. 2 minutes",
 "2 分钟版 / 63 秒精剪版":"2-minute version / 63-second edit",
 "一个女孩从黎明跑到下一个黎明，穿过一座城市。以光线、运动和音乐组织短片。":"A girl runs through a city from one dawn to the next. Light, movement and music shape the film.",
 "全部画面在本地生成":"All visuals generated locally",
@@ -12,20 +12,20 @@ const TEXT = {"01 · 《一圈》本地开源模型音乐短片":"01 · One Lap 
 "在本地 GPU 工作站上，与 Agent 协作搭建、运行和调试 ComfyUI 生产管线。起始画面使用 Krea 2，动态使用 MiniMax H3；根据测试镜头的表现调整模型与处理流程。":"With agents, I built, ran and debugged a ComfyUI production pipeline on a local GPU workstation. Krea 2 supplied starting images and MiniMax H3 generated motion. Model and processing choices followed tests on demanding shots.",
 "剪辑与复查":"Editing and review",
 "设计画面内转场，依据音乐段落与脚步落点安排剪辑；检查动作流畅度、角色服装、光照方向与转场连续性，根据审片结果修改。":"I designed transitions within the image and edited around musical sections and footfalls. Reviews covered movement, clothing, light direction and continuity across transitions, with revisions guided by the results.",
-"当前仅展示项目静帧与制作说明，不提供视频播放或下载。":"This page currently shows a project still and production notes, without video playback or downloads.",
-"查看静帧与制作说明 →":"View the still and production notes →",
+"此处播放 63 秒预览版；完整版约 2 分钟，可按需提供。":"Watch the 63-second preview here. The full film is approximately 2 minutes and is available on request.",
+"观看预览与制作说明 →":"Watch the preview and read the production notes →",
 "查看本地制作与画面取舍说明 →":"Read about local production and shot selection →",
-"项目静帧、本地生成与画面取舍说明":"Project still, local generation and shot-selection notes",
+"63 秒预览、本地生成与画面取舍说明":"63-second preview, local generation and shot-selection notes",
 "查看项目":"View project",
 "读说明":"Read notes",
 "02 · 《一圈》本地开源模型音乐短片":"02 · One Lap — a locally generated music film",
-"本页展示《一圈》的项目静帧。短片包含 2 分钟版与 63 秒精剪版，目前不在网站提供视频播放。":"This page presents a still from One Lap. The project includes a two-minute version and a 63-second edit; video is not currently available on this site.",
+"《一圈》现可观看 63 秒预览版，完整版约 2 分钟。两个版本均已锁定，本页提供制作说明。":"One Lap is available as a 63-second preview, with a full film of approximately 2 minutes. Both cuts are locked; this page documents the production.",
 "《一圈》项目静帧：夕阳下跑向城市的女孩":"One Lap project still: a girl running towards the city at sunset",
 "返回工作室":"Back to the studio",
 "返回作品入口":"Back to the portfolio",
 "制作方式与创作决策":"Production method and creative decisions",
 "我是 P. ÆVRYX，拥有 3 年 AI 工具使用经验，聚焦 AI 视频生成与制作、ComfyUI 工作流及 LoRA 实践。从创意、剧本分镜到审片与剪辑，结合生成结果持续迭代；现有 SOLVANE《静的形状》汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版，以及本地开源模型音乐短片《一圈》。":"I’m P. ÆVRYX. I have three years of experience using AI tools, focusing on AI video production, ComfyUI workflows and LoRA practice. I develop concepts and storyboards, review generated footage and refine the edit. Selected work includes the SOLVANE automotive spec film The Shape of Silence, Twenty-Four Frames and One Lap, a music film made with local open-weight models.",
-"本网站展示既有作品与工作流材料，网站整理没有新增训练、生成或付费媒体调用。较长作品采用轻量预览，标注时长指原作。材料涵盖 SOLVANE《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《一圈》本地开源模型音乐短片、《雨停之前》的开场与局部对照，以及 ComfyUI、LoRA 和流程调试说明。":"This site presents existing work and production records: the SOLVANE automotive spec film, Twenty-Four Frames, the locally generated music film One Lap, Before the Rain Stops, and ComfyUI, LoRA and workflow notes. Longer videos use lightweight previews. One Lap currently has a still and notes only.",
+"本网站展示既有作品与工作流材料，网站整理没有新增训练、生成或付费媒体调用。较长作品采用轻量预览，标注时长指原作。材料涵盖 SOLVANE《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《一圈》本地开源模型音乐短片、《雨停之前》的开场与局部对照，以及 ComfyUI、LoRA 和流程调试说明。":"This site presents existing work and production records: the SOLVANE automotive spec film, Twenty-Four Frames, the locally generated music film One Lap, Before the Rain Stops, and ComfyUI, LoRA and workflow notes. Longer videos use lightweight previews. One Lap offers a 63-second preview; the full film is approximately 2 minutes.",
 
   "← 返回作品入口": "← Back to portfolio",
   "项目与工作流说明": "Project & Workflow Notes",
@@ -131,7 +131,7 @@ const TEXT = {"01 · 《一圈》本地开源模型音乐短片":"01 · One Lap 
   "本网站展示既有作品与工作流材料，网站整理没有新增训练、生成或付费媒体调用。较长作品采用轻量预览，标注时长指原作。材料涵盖 SOLVANE《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《The Bass》MMD、《雨停之前》的开场与局部对照，以及 ComfyUI、LoRA 和流程调试说明。": "This site presents existing work and workflow materials; assembling the site involved no new training, generation or paid media calls. Longer works use lightweight previews, with original durations stated separately. Materials cover the 30-second SOLVANE automotive spec film The Shape of Silence, the 98-second complete edit of Twenty-Four Frames, One Lap local-model music film, the opening and local comparisons for Before the Rain Stops, and ComfyUI, LoRA and workflow-debugging notes."
 };
 
-import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261030-order-v1';
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261030-lap-video-v1';
 
 // Keep existing anchors, download elements and inline code intact.
 const entries = [];

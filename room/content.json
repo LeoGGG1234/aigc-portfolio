@@ -69,8 +69,8 @@
         "en": "One Lap · Local Open-Weight Music Film"
       },
       "year": "2026",
-      "type": "image",
-      "src": "../assets/one-lap/one-lap-cover.jpg",
+      "type": "video",
+      "src": "../assets/one-lap/one-lap-63s-web.mp4",
       "tools": [
         "ComfyUI",
         "Krea 2",
@@ -78,10 +78,11 @@
         "Agent collaboration"
       ],
       "description": {
-        "zh": "全部图像及视频素材使用本地部署的开源模型生成，未调用付费视频生成服务。负责视觉设计、分镜和画面取舍，以构图、光线、动作与角色一致性筛选素材。现有 2 分钟版与 63 秒精剪版；当前仅展示项目静帧与制作说明。配乐使用 Suno。",
-        "en": "All image and video assets were generated locally with open-weight models, without paid video-generation services. I directed visual design, storyboards and shot selection, judging composition, lighting, movement and character consistency. The project includes a two-minute version and a 63-second edit; this site currently shows a still and production notes only. Music was made with Suno."
+        "zh": "全部图像及视频素材使用本地部署的开源模型生成，未调用付费视频生成服务。负责视觉设计、分镜和画面取舍，以构图、光线、动作与角色一致性筛选素材。现有 2 分钟版与 63 秒精剪版；本站播放 63 秒预览版，完整版约 2 分钟。配乐使用 Suno。",
+        "en": "All image and video assets were generated locally with open-weight models, without paid video-generation services. I directed visual design, storyboards and shot selection, judging composition, lighting, movement and character consistency. The project includes a two-minute version and a 63-second edit; this site plays the 63-second preview; the full film is approximately 2 minutes. Music was made with Suno."
       },
-      "link": "one-lap.html"
+      "link": "one-lap.html",
+      "poster": "../assets/one-lap/one-lap-cover.jpg"
     },
     {
       "title": {
