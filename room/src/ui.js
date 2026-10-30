@@ -1,6 +1,6 @@
 // DOM overlay: masthead, nav, atmosphere popover, caption, in-scene labels, panels, mobile sheet, entry.
 import { i18n } from './content.js';
-import { languageHref, labelLanguageButton } from '../../language.js?v=20261029-one-lap-v1';
+import { languageHref, labelLanguageButton } from '../../language.js?v=20261030-order-v1';
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));

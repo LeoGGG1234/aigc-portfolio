@@ -1,4 +1,4 @@
-import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange } from '../../language.js?v=20261029-one-lap-v1';
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange } from '../../language.js?v=20261030-order-v1';
 import * as THREE from './three.js';
 import { GLTFLoader } from './three.js';
 import { i18n, loadContent, placeholderCanvas } from './content.js';

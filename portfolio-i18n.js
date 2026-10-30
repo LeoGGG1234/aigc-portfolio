@@ -198,7 +198,7 @@ const ATTR = {"《一圈》项目静帧：夕阳下跑向城市的女孩":"One L
   "电视边缘羽化1.7和2.8像素对照": "TV-screen edge feathering at 1.7 and 2.8 pixels"
 };
 
-import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261029-one-lap-v1';
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261030-order-v1';
 
 // Translate text nodes in place: video elements, playback state and anchors stay intact.
 const textEntries = [];

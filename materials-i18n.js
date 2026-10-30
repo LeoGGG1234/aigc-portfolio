@@ -1,5 +1,5 @@
 // English translation of the existing detailed material notes.
-const TEXT = {"《一圈》One Lap":"One Lap",
+const TEXT = {"01 · 《一圈》本地开源模型音乐短片":"01 · One Lap — a locally generated music film","02 · MV · Twenty-Four Frames":"02 · MV · Twenty-Four Frames","03 · SOLVANE《静的形状》品牌概念片":"03 · SOLVANE: The Shape of Silence — Spec Film","《一圈》One Lap":"One Lap",
 "本地开源模型音乐短片":"Music film made with local open-weight models",
 "项目静帧 · 暂不提供视频播放":"Project still · Video not currently available",
 "2 分钟版 / 63 秒精剪版":"2-minute version / 63-second edit",
@@ -49,7 +49,7 @@ const TEXT = {"《一圈》One Lap":"One Lap",
   "着色预设：小二。": "Shader preset: Xiao Er (小二).",
   "相关角色、模型、动作、音乐和预设来自第三方。本片展示的是素材整合、镜头与视觉调整及审片迭代，不主张原创角色建模或原创动作设计。另有 13 秒 3D 驱动 AI 动作实验，材料与制作范围单独说明。": "The characters, models, motion, music and presets come from third parties. This film demonstrates asset integration, camera and visual adjustments, and review-driven iteration; it does not claim original character modelling or motion design. The separate 13-second experiment in 3D-driven AI motion has its own material and production-scope notes.",
   "返回完整成片 →": "Back to the complete film →",
-  "03 · 《雨停之前》": "03 · Before the Rain Stops",
+  "04 · 《雨停之前》": "04 · Before the Rain Stops",
   "现有 43.083 秒开场由两段已有 AI 视频串联，后期版本整理了电视画面替换、音频接缝处理和统一导出流程。原始视频及历史版本保留；当前展示的是后期流程预览。": "The existing 43.083-second opening joins two previously generated AI clips. The post-production version organises TV-screen replacement, audio-transition work and a consistent export workflow. Source videos and earlier versions are retained; the current presentation is a post-production workflow preview.",
   "工作链条": "Production Sequence",
   "故事与参考设计 → 预演／镜头要求 → AI 视频生成与筛选 → 局部画面合成 → 声音接缝处理 → 规格检查与版本归档。": "Story and reference design → previs / shot requirements → AI video generation and selection → local image compositing → audio-transition work → specification checks and version archiving.",
@@ -66,7 +66,7 @@ const TEXT = {"《一圈》One Lap":"One Lap",
   "原始输入通过 SHA256 核对，输出边界用于保护源文件。": "Source inputs were checked using SHA256; output-path boundaries were used to protect the source files.",
   "上述为历史技术记录；本次仅制作轻量预览，未重跑原后期验证。技术检查不代表声音自然度或最终审美验收通过。现有电视合成针对近固定镜头，不属于通用遮挡追踪方案。": "These are historical technical records. This test release only creates lightweight previews; the original post-production verification was not rerun. Technical checks do not establish acceptance of voice naturalness or the final aesthetic result. The TV compositing targets a nearly fixed shot; it is not a general occlusion-tracking solution.",
   "返回视频与对照图 →": "Back to the video & comparison images →",
-  "04 · 模型调用与 ComfyUI 工作流实践": "04 · Model Use & ComfyUI Workflows",
+  "05 · 模型调用与 ComfyUI 工作流实践": "05 · Model Use & ComfyUI Workflows",
   "围绕具体任务选择和调用模型，在 ComfyUI 中搭建、调整文生图、图生图及 LoRA 测试链路；配置基模、VAE、采样与输出参数，结合阶段结果排查依赖、节点兼容与画面偏差。": "I select and use models for specific tasks, build and adjust text-to-image, image-to-image and LoRA test workflows in ComfyUI, and configure base models, VAEs, sampling and output settings. I use intermediate results to diagnose dependency, node-compatibility and visual issues.",
   "图像生成实践涉及 SDXL 系列、Anima、Krea 2 等模型；视频生成实践涉及 Seedance 2.5、MiniMax H3、Wan 2.x 系列。按实际使用方式分别记录平台生成输入与 ComfyUI 工作流参数。": "Image-generation practice includes the SDXL family, Anima and Krea 2. Video-generation practice includes Seedance 2.5, MiniMax H3 and the Wan 2.x family. Platform-generation inputs and ComfyUI workflow parameters are recorded separately according to how each tool was used.",
   "角色 LoRA 案例保留了 15 对训练图文、1500 步／10 epoch 训练记录、16 张历史评估样图及推理配置。本人参与数据与概念整理、参数取舍和结果审阅；配置、检查及文档含 AI 辅助。": "The character-LoRA case retains 15 training image–caption pairs, records of 1,500 steps over 10 epochs, 16 historical evaluation samples and inference configurations. I contributed to data and concept organisation, parameter decisions and result review. Configuration, checks and documentation include AI assistance.",
@@ -88,7 +88,7 @@ const TEXT = {"《一圈》One Lap":"One Lap",
   "历史记录比较检查点、LoRA 强度、提示词详细程度，以及身份、服装、姿态和局部细节的取舍。16 张样图没有完整逐图执行快照，不能将此比较表述为严格控制实验、通用最优参数或统计 benchmark。": "Historical records compare checkpoints, LoRA strengths and prompt detail, including trade-offs in identity, clothing, pose and local detail. The 16 sample images do not have complete per-image execution snapshots. This comparison should not be described as a strictly controlled experiment, universally optimal settings or a statistical benchmark.",
   "第三方角色、服装、图源及模型的权利不因本项目而转移。样图与完整训练材料仅供约定范围内的私下审阅；公开 JSON 不附模型或图像许可。": "This project does not transfer rights in third-party characters, clothing, source images or models. Samples and complete training materials are available only for private review within an agreed scope. The public JSON files do not include model or image licences.",
   "返回工作流入口 →": "Back to workflows →",
-  "05 · 3D 驱动 AI 动作": "05 · 3D-driven AI Motion",
+  "06 · 3D 驱动 AI 动作": "06 · 3D-driven AI Motion",
   "现有 13.042 秒视频实践连接第三方 VRM／VMD、Blender 动作驱动、首帧风格、AI 生成、审片与本地后期。已有版本迭代针对驱动发夹对参考发饰的干扰，调整驱动材质可见性与参考要求后进行比较。": "An existing 13.042-second video experiment connects third-party VRM / VMD assets, Blender motion guidance, first-frame styling, AI generation, review and local post-production. Version comparisons addressed interference from a hair clip in the motion-guidance render, adjusting material visibility and reference requirements before comparing the results.",
   "本人负责需求、风格与成片选择、审片及迭代决策；管线代码含 AI 辅助。使用 VRoid 样例角色，动作来源为 winglayer／猪肉屑炳，编舞来源为我是君君呀。该项目不主张原创角色建模、原创动作或全部代码独立开发。": "I defined requirements, selected the style and final version, reviewed footage and made iteration decisions. The pipeline code includes AI assistance. It uses a VRoid sample character; motion credits: winglayer / 猪肉屑炳; choreography: 我是君君呀. The project does not claim original character modelling, original motion or that all code was developed independently.",
   "音乐记录为私用，动作资料不允许再分发，AI 使用许可未明确。故公开入口仅展示流程与贡献说明；视频及逐秒检查图可在约定的私下审阅范围内提供，不上传原角色、动作与音乐文件。": "The music is recorded as private-use material, the motion assets do not allow redistribution, and permission for AI use is unclear. The public page therefore shows workflow and contribution notes only. The video and second-by-second inspection images may be shared for private review within an agreed scope; source character, motion and music files are not uploaded.",
@@ -131,7 +131,7 @@ const TEXT = {"《一圈》One Lap":"One Lap",
   "本网站展示既有作品与工作流材料，网站整理没有新增训练、生成或付费媒体调用。较长作品采用轻量预览，标注时长指原作。材料涵盖 SOLVANE《静的形状》30 秒汽车品牌概念片、《Twenty-Four Frames》98 秒 MV 完整剪辑版、《The Bass》MMD、《雨停之前》的开场与局部对照，以及 ComfyUI、LoRA 和流程调试说明。": "This site presents existing work and workflow materials; assembling the site involved no new training, generation or paid media calls. Longer works use lightweight previews, with original durations stated separately. Materials cover the 30-second SOLVANE automotive spec film The Shape of Silence, the 98-second complete edit of Twenty-Four Frames, One Lap local-model music film, the opening and local comparisons for Before the Rain Stops, and ComfyUI, LoRA and workflow-debugging notes."
 };
 
-import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261029-one-lap-v1';
+import { readLanguage, rememberLanguage, updateLanguageUrl, onLanguageChange, localisePageLinks } from './language.js?v=20261030-order-v1';
 
 // Keep existing anchors, download elements and inline code intact.
 const entries = [];
